@@ -2,23 +2,34 @@
 
 > 6-year research report covering every Elite 8 and Final Four team across the 2019, 2021, 2022, 2023, 2024, and 2025 NCAA Tournaments.
 > *(2020 cancelled due to COVID-19)*
-> Goal: identify what separates Sweet 16 teams from Final Four teams, and Final Four teams from champions.
+> Goal: analyze the statistical factors, efficiency thresholds, and game-level patterns that explain what separates Sweet 16 teams from Elite 8 teams, Elite 8 from Final Four, and Final Four teams from champions. ATS/betting data is included in appendix sections.
 
 ---
 
 ## Quick Reference — Top Findings
 
+### Why Teams Advance — Statistical
+
 | Category | Key Finding |
 |----------|-------------|
-| 1-seeds in Final Four | 54%+ of all spots (13/24) |
-| Champion KenPom range | Top 1-6 every year |
-| Champion AdjEM floor | +25 minimum — most above +29 |
-| Universal champion trait | Top 25 AdjO AND top 25 AdjD |
-| Best ATS play in tournament | 5-seeds in Elite 8: 8-1 ATS since 1985 |
-| Worst ATS play | 1-seeds in Elite 8: 43.4% ATS |
-| Final Four winner covers | 83% of the time outright |
-| Elite 8 underdog ATS | 80-60-2 (57%) all-time |
+| Elite 8 efficiency floor | KenPom top 20 + AdjEM +20+ required — 87.5% of Elite 8 teams inside KenPom top 20 |
+| Two-way requirement | Top 25 AdjO AND top 25 AdjD at Elite 8+ — "Extreme Teams" (top-10 one metric, outside top-50 other) have 0 championships in 22 years |
+| Final Four AdjEM floor | +25 AdjEM — below +20 is a long shot regardless of seed |
+| Why Cinderellas max out at Elite 8 | Defense-first teams get exposed when facing both elite AdjO AND AdjD simultaneously |
+| Champion KenPom gate | Top 1-6 every year — unbroken across the entire KenPom era |
+| Champion AdjEM floor | +25 minimum — most above +29; universal across all 6 champions |
+| Why winners keep covering | Final Four winners cover **83% of the time** — structural confidence advantage |
 | Seeds 13-14 in Elite 8 | Never happened in these 6 years |
+| 1-seeds in Final Four | 54%+ of all spots (13/24) — efficiency predicts, seeding reflects it |
+
+### Betting Reference — ATS Data (see Appendix sections below for full data)
+
+| Category | Key Finding |
+|----------|-------------|
+| Best bet in tournament | 5-seeds in Elite 8: **8-1 ATS** since 1985 |
+| Worst ATS play | 1-seeds in Elite 8: **43.4% ATS** since 2001 |
+| Final Four rule | Pick the winner — they cover **83%** of the time |
+| Elite 8 underdogs | **80-60-2 ATS (57%)** all-time — lean underdogs |
 
 ---
 
@@ -283,6 +294,98 @@ Defeated Houston 65-63. Defeated Auburn 79-73 in semifinal. AdjEM ~+36.22. Top 4
 
 ---
 
+## Part A — Why Teams Reach the Elite 8: Sweet 16 → Elite 8 Separation
+
+### A1 — The Efficiency Floor at the Elite 8
+
+The Elite 8 represents the bracket's second major efficiency cliff. Sweet 16 teams can advance with one elite dimension and a favorable matchup; Elite 8 teams almost never have an exploitable weakness on either side of the ball.
+
+| Metric | Typical Sweet 16 Range | Elite 8 Average | Elite 8 (excl. Cinderellas) |
+|--------|------------------------|-----------------|---------------------------|
+| KenPom Rank | Top 5–40 | **14.6** | **9.5** |
+| AdjEM | +18 to +28 | **+25.1** | **+25.9** |
+| AdjD Rank | Top 10–55 | **~21.3** (73% inside top 30) | **~17.9** (83% inside top 25) |
+| AdjO Rank | Top 15–60 | **~17.4** (71% inside top 30) | **~16.5** (80% inside top 25) |
+| % in KenPom Top 20 | ~70% | **87.5%** | **95%** |
+
+**The two-way requirement becomes non-negotiable at the Elite 8.** Sweet 16 teams can have a 40th-ranked defense and survive one game. Elite 8 opponents have enough film to specifically attack a weakness — teams with a weak side get exposed.
+
+### A2 — Who Can Reach Elite 8 from Outside KenPom Top 35
+
+Only 3 of 48 Elite 8 teams (6.25%) came from outside KenPom top 35 in this window:
+
+| Team | Year | Seed | KenPom | AdjD | AdjO | How They Got There |
+|------|------|------|--------|------|------|-------------------|
+| Saint Peter's | 2022 | 15 | ~128 | ~28 | ~130 | AdjD #28 — elite zone defense + Kentucky's weak AdjD. Three straight games decided by 4 points or fewer; held opponents in every game through pure defensive identity |
+| Princeton | 2023 | 15 | ~93 | ~13 | ~90 | AdjD #13 — best defensive rank for any 15-seed ever. Held Arizona to 55 pts and Missouri to 63 pts by dictating pace and forcing turnovers |
+| NC State | 2024 | 11 | 49 | ~38 | ~48 | Balanced profile (no exploitable weakness) + won ACC Tournament. Beat 4 opponents in a row who underestimated them; conditioning and experience carried the run |
+
+**Common thread**: Each had either elite defense (top-15 nationally) or a balanced efficiency profile above AdjEM +14. Sub-top-35 teams without one of those two traits don't make the Elite 8.
+
+### A3 — The Extreme Team Warning at the Elite 8
+
+Teams ranking top-10 in one efficiency metric but outside top-50 in the other — "Extreme Teams" — produced **zero championships in 22 years** and only 4 Final Fours (2.6% of 155 teams). At the Elite 8 level this pattern becomes the primary reason contenders lose:
+
+- Elite offense + exposed defense → opponent runs an efficient half-court attack and wins (Gonzaga 2021 vs Baylor, Gonzaga 2023 vs UConn)
+- Elite defense + limited offense → runs out of points in a close game (San Diego State 2023: reached Final Four on defense but had no answer for UConn's offense in the championship)
+
+---
+
+## Part B — Why Teams Reach the Final Four: What Elite 8 Losers Lacked
+
+### B1 — The Elite 8 Separation: Who Advanced and Why
+
+Looking at the consistent pattern of Elite 8 exits across all 6 years:
+
+| Year | Team That Lost | Why They Lost | What They Lacked |
+|------|---------------|---------------|------------------|
+| 2019 | Purdue (3) | Virginia's pack-line defense forced Purdue below their season offensive average by 8+ points | No defensive identity to counter Virginia's pace control |
+| 2021 | Michigan (1) | UCLA's guard-heavy zone and Johnny Juzang's shot-making in OT | Michigan couldn't solve the zone; UCLA was top-20 KenPom |
+| 2022 | Houston (5) | Villanova's guard-driven half-court execution controlled tempo | Houston's physical defense couldn't disrupt Villanova's veteran ball movement |
+| 2023 | Gonzaga (3) | UConn won 82-54 — most lopsided Elite 8 in years | Gonzaga's AdjO #1 was neutralized by UConn's two-way defense. One-dimensional offense (even the best in the country) loses when the opponent has elite defense AND offense |
+| 2024 | Tennessee (2) | Zach Edey's interior dominance gave Tennessee no schematic answer | Tennessee's elite defense had no interior counter; defense-first teams without a specific offensive weapon get stuck |
+| 2025 | Michigan State (2) | Auburn's pace and athleticism overwhelmed veteran scheme | Michigan State's balanced-but-not-elite profile wasn't enough against a 1-seed |
+
+**The Final Four filter**: Teams that reach the Final Four have **matchup-proof two-way competence** — they don't have a specific weakness that an Elite 8-caliber opponent can scheme around in one game. Teams that max out at Elite 8 can usually be identified by a specific exploitable dimension before the tournament starts.
+
+### B2 — The AdjEM Threshold for Final Four
+
+| Stage | AdjEM Range (non-Cinderellas) | Notes |
+|-------|-------------------------------|-------|
+| Sweet 16 exits | +14 to +21 | Bracket-lucky teams; one-dimensional; matchup-dependent |
+| Elite 8 exits | +19 to +24 | Good teams that faced a specifically better-equipped opponent |
+| Final Four teams | **+25 to +36** | Structural advantage in every matchup |
+| Champions | **+26 to +36.4** | Sub-+25 champions haven't existed in recent history |
+
+The +25 AdjEM line is the Final Four structural floor. Below it, you need a specific combination of matchup luck, opponent error, and bracket positioning. Above it, the efficiency gap does most of the work.
+
+---
+
+## Part C — Why Champions Win: Statistical Patterns Across All 6 Years
+
+Each champion won by exploiting a structural advantage that no opponent in the bracket could fully neutralize:
+
+| Year | Champion | Their Edge | Why No Opponent Could Stop It |
+|------|----------|-----------|-------------------------------|
+| 2019 | Virginia | Pack-line defense + slowest tempo (#353/353) | Compressed games to 55-60 possessions — eliminated opponents' ability to run preferred offense. Texas Tech was the only team slow enough to compete; Virginia won in OT |
+| 2021 | Baylor | Elite 3-point shooting depth + two-way guard play | Three interchangeable guard scorers meant no single defensive assignment solved them. Gonzaga (AdjO #1 nationally) couldn't outscore Baylor — and Baylor's defense was better too |
+| 2022 | Kansas | Star depth + second-half adjustment ability | Down 16 at halftime in the title game. Remy Martin off the bench, Ochai Agbaji closing. Depth gave Self options no opponent could prepare for when the game turned |
+| 2023 | UConn | +32 AdjEM two-way dominance | Won every game by 13+ points. No opponent within 12 at any point. Structural efficiency advantage made individual games irrelevant — UConn was simply better than everyone on both sides of the ball |
+| 2024 | UConn | +36.4 AdjEM — highest in modern era | +140 point differential in 6 games. The most dominant tournament performance ever recorded. Hurley's defensive scheme was elite AND the offense was #1 nationally — zero exploitable dimension |
+| 2025 | Florida | Top-4 AdjO + Top-4 AdjD + #1 FT rate nationally | Two-way excellence absorbed variance; FT rate (#1) and offensive rebounding (top 3) provided the variance absorbers that won the 65-63 championship against Houston's #1 defense |
+
+**Three structural paths to a championship:**
+
+1. **Efficiency dominance** (UConn 2023, UConn 2024): AdjEM so high that no opponent is statistically close enough to be a threat. Efficiency converts to margin; margin compounds across 6 games.
+2. **Two-way balance + variance absorbers** (Virginia 2019, Florida 2025): Defense controls pace, limits possessions, and free throw/rebounding edge absorbs the one close game that every champion faces.
+3. **Depth + adaptability** (Kansas 2022, Baylor 2021): Multiple offensive weapons that can't all be schemed against in one game; second-half adjustment advantage when opponents make halftime corrections.
+
+**What all 6 shared that runners-up did not**: KenPom top 6 + AdjO top 25 + AdjD top 25. This gate has never been broken. No champion outside this profile exists in the KenPom era.
+
+---
+
+> **📊 Betting Appendix** — ATS and totals data for wagering reference. The sections above focus on why teams advance; the sections below focus on betting market inefficiencies.
+
 ## Part 5 — ATS Edges (Elite 8 & Final Four)
 
 ### Elite 8 ATS
@@ -354,6 +457,8 @@ Defeated Houston 65-63. Defeated Auburn 79-73 in semifinal. AdjEM ~+36.22. Top 4
 
 ---
 
+> **📊 Betting Appendix** — ATS and totals data for wagering reference. The sections above focus on why teams advance; the sections below focus on betting market inefficiencies.
+
 ## Part 8 — Recommendations for Betting Model
 
 ### Champion Predictor Gate (Must meet ALL):
@@ -413,4 +518,4 @@ Defeated Houston 65-63. Defeated Auburn 79-73 in semifinal. AdjEM ~+36.22. Top 4
 ---
 
 *Research compiled February 2026. Data covers 2019, 2021, 2022, 2023, 2024, 2025 NCAA Tournaments.*
-*Companion file to SWEET16_ANALYSIS.md. Intended for NCAAB betting model development.*
+*Statistical analysis of why teams reach Elite 8, Final Four, and win championships (Parts A–C) with Betting Appendix (Parts 5, 8). Companion to SWEET16_ANALYSIS.md and R64_R32_ANALYSIS.md.*

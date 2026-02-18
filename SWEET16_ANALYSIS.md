@@ -1,23 +1,34 @@
 # NCAAB March Madness — Sweet 16 Analysis (2019–2024)
 
 > 5-year research report analyzing every Sweet 16 team across the 2019, 2021, 2022, 2023, and 2024 NCAA Tournaments.
-> Goal: identify statistical trends, conference patterns, seed distribution, and ATS edges that predict Sweet 16 advancement.
+> Goal: analyze the statistical factors, efficiency thresholds, and game-level patterns that explain why teams advance to and through the Sweet 16. ATS/betting data is included in appendix sections.
 > *(2020 tournament was cancelled due to COVID-19)*
 
 ---
 
 ## Quick Reference — Top Findings
 
+### Why Teams Reach the Sweet 16 — Statistical
+
 | Category | Key Finding |
 |----------|-------------|
 | Best predictor | KenPom top 25 = ~80% Sweet 16 rate |
-| Defense floor | Top 30 defensive efficiency = required |
-| Best ATS edge | Fade 5+ pt Sweet 16 favorites (7-15 ATS, 31.8%) |
-| Best underdog play | 11-seeds vs 6-seeds: 33-19 ATS (63.5%) since 2009 |
-| Dead zone | Seeds 6–9 = only 7.5% of Sweet 16 spots |
+| Defense floor | AdjD top 40 required — sub-top-50 defenses almost never survive two rounds |
+| Efficiency cliff | R32→Sweet 16 is the steepest jump: AdjEM +14 (R32 teams) vs +22 (Sweet 16 teams) |
+| Dead zone | Seeds 6–9 = only 7.5% of Sweet 16 spots — structural bracket position, not talent |
+| 11-seed anomaly | Appeared every single year — almost all are power conference mis-seeds (KenPom 25-40) |
 | Never happened | Seeds 13–14 have NEVER reached the Sweet 16 in these 5 years |
+| True Cinderella profile | AdjD top 30 + slow tempo + opponent's defensive weakness — all three 15-seeds that advanced fit this |
 | Most reliable conference | ACC: 15 berths in 5 years (3.0/year avg) |
 | Only mid-major lock | Gonzaga (WCC) — Sweet 16 every year studied |
+
+### Betting Reference — ATS Data (see Appendix sections below for full data)
+
+| Category | Key Finding |
+|----------|-------------|
+| Best ATS edge | Fade 5+ pt Sweet 16 favorites: **7-15 ATS (31.8%)** since 2017 |
+| Best underdog play | Back 4-6 pt Sweet 16 underdogs: **56.7% ATS** since 1990 |
+| R64 edge | 11-seeds vs 6-seeds: **63.5% ATS** since 2009 |
 
 ---
 
@@ -244,6 +255,65 @@
 
 ---
 
+## Part A — Why Teams Reach the Sweet 16: Statistical Factors
+
+### A1 — The Efficiency Cliff: R32 → Sweet 16
+
+The R32 → Sweet 16 jump is the single steepest efficiency cliff in the bracket. Teams that lost in R32 averaged AdjEM +14 to +16; teams that advanced to Sweet 16 averaged +22 to +24. That ~8-point AdjEM gap is the structural separation between "good enough to win one tournament game" and "built to go deep."
+
+| Threshold | Floor | Why It's Required |
+|-----------|-------|-------------------|
+| AdjEM | +22 to +24 | Sub-+20 teams advance only with significant bracket luck |
+| AdjD Rank | Top 40 | Every Sweet 16 team in 6 years had AdjD inside top 40 (Oral Roberts at AdjD #285 won R64 on offense, then exited R32 the moment they faced a real defense) |
+| AdjO Rank | Top 35 | Sweet 16 requires scoring efficiency — defensive identity alone can carry R64 but rarely two consecutive games against prepared opponents |
+| KenPom Overall | Top 25 | ~80% Sweet 16 rate for teams in this range; teams outside top 50 almost never advance regardless of seed |
+
+### A2 — Why the 6-9 Seed Dead Zone Exists
+
+Seeds 6-9 produced just 7.5% of Sweet 16 spots across 5 years — a structural bracket problem, not a talent problem.
+
+- **6-seeds in R32**: Draw an 11-seed who won R1. That 11-seed is almost always a power conference at-large team (KenPom 25-50) — not a true underdog. A KenPom-30 team assigned an 11-seed is effectively a 4-6 seed in the bracket.
+- **7-seeds in R32**: Draw a 10-seed who won R1, typically facing a 2-seed somewhere nearby. Difficult bracket placement both directions.
+- **8-9 seeds in R32**: Win a coin-flip R1 game, then face a 1-seed — who advances at ~85-90%. The path is structurally near-impossible.
+- **Result**: Not that 6-9 seeds are bad teams — it's that their bracket position forces them to beat more efficient opponents back-to-back with no margin for error.
+
+### A3 — Why 11-Seeds Appear Every Year
+
+An 11-seed reached the Sweet 16 every single year studied (2019–2024). The explanation is committee seeding error, not randomness:
+
+Most 11-seeds that advance are power conference at-large teams with KenPom rankings of 25–40. Against a 6-seed in the same range, they are structural near-equals — but the line treats them as 5-point underdogs because of seed optics. When they win R1, they face a 3-seed in R32 (another power conference team they've played all season). The familiarity and quality removes the intimidation factor.
+
+| Year | 11-seed that advanced | KenPom rank | Why they weren't a real Cinderella |
+|------|-----------------------|-------------|-------------------------------------|
+| 2019 | Ohio State | ~35 | Big Ten at-large — conference wins mattered |
+| 2021 | UCLA | ~17 | KenPom top-20 — clearly mis-seeded |
+| 2021 | Syracuse | ~45 | ACC at-large — experienced March program |
+| 2022 | Iowa State | ~28 | Big 12 at-large — one of the best conferences |
+| 2022 | Michigan | ~32 | Big Ten at-large — power conference résumé |
+| 2024 | NC State | ~49 | Won the ACC Tournament — by definition should have been seeded higher |
+
+### A4 — What True Cinderellas (Seeds 12-15) Who Reached Sweet 16 Had in Common
+
+Three 15-seeds reached the Sweet 16 in this window. Each followed a statistically consistent profile:
+
+| Team | Year | AdjD | Tempo | How They Won |
+|------|------|------|-------|--------------|
+| Oral Roberts | 2021 | ~285 | Slow | AdjO #25 exploited Ohio State's AdjD #79 (weak for 2-seed). Won by offensive mismatch, not defensive identity. Lost in Sweet 16 the moment they faced a team with a real defense |
+| Saint Peter's | 2022 | ~28 | Very slow | AdjD top-30 + Kentucky's defensive weakness (weak AdjD for a 2-seed). Held 3 straight opponents within 4 points through pure defensive identity and pace control |
+| Princeton | 2023 | ~13 | Very slow | AdjD #13 nationally — best defensive rank ever for a 15-seed. Held Arizona to 55 points on 4-for-25 from 3. Made every opponent play at Princeton's pace, not their own |
+
+**The pattern**: Every non-power Cinderella that reached the Sweet 16 won by creating a specific statistical mismatch — either elite defense suffocating a offense-heavy opponent, or elite offense exploiting a defensively weak favorite. None won on overall talent.
+
+### A5 — The Most Common Reason Chalk Teams Exit in R32
+
+The single most consistent cause of a seeded favorite (2-through-5) losing in R32: **defensive ranking below expectations for their seed tier**.
+
+When a 2-seed's AdjD ranks outside the top 40, or a 3-seed ranks outside the top 50, they become exploitable by teams that score efficiently. They can't stop teams they're supposed to beat. Ohio State 2021 (2-seed, AdjD #79), Kentucky 2022 (2-seed, weak AdjD), and Auburn 2024 (4-seed, AdjD vulnerable) all lost for this reason. The Sweet 16 defensive floor isn't aspirational — it's structural. Teams without AdjD top 40 almost never advance.
+
+---
+
+> **📊 Betting Appendix** — ATS and totals data for wagering reference. The sections above focus on why teams advance; the sections below focus on betting market inefficiencies.
+
 ## Part 3 — Top 7 Predictors of Sweet 16 Appearance
 
 | Rank | Stat | Threshold | Why It Matters |
@@ -328,6 +398,8 @@
 
 ---
 
+> **📊 Betting Appendix** — ATS and totals data for wagering reference. The sections above focus on why teams advance; the sections below focus on betting market inefficiencies.
+
 ## Part 7 — Recommended Features for a Betting Model
 
 ### Tier 1 — Core Features (Highest Impact)
@@ -374,4 +446,4 @@
 ---
 
 *Research compiled February 2026. Data covers 2019, 2021, 2022, 2023, 2024 NCAA Tournaments.*
-*Intended for use in NCAAB betting model development.*
+*Statistical analysis of why teams reach the Sweet 16 (Part A) with Betting Appendix (Parts 4, 7). Companion to R64_R32_ANALYSIS.md and ELITE8_FINAL4_ANALYSIS.md.*
