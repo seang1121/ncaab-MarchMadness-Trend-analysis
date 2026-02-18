@@ -2,29 +2,37 @@
 
 > **Full research report** combining Sweet 16, Elite 8, and Final Four analysis across 6 years (2019, 2021, 2022, 2023, 2024, 2025).
 > *(2020 tournament was cancelled due to COVID-19)*
-> Goal: identify the statistical profiles, conference patterns, seed distributions, ATS edges, and Cinderella traits that predict tournament advancement at every round.
-> Intended for use in NCAAB betting model development.
+> Goal: analyze the statistical profiles, efficiency thresholds, and game-level factors that explain why teams advance to the Final Four and win championships. ATS/betting data is included in appendix sections.
 
 ---
 
 ## Quick Reference — Top Findings Across All Rounds
 
+### Why Teams Advance — Statistical
+
 | Category | Key Finding |
 |----------|-------------|
 | Best Sweet 16 predictor | KenPom top 25 = ~80% Sweet 16 rate |
-| Defense floor (Sweet 16) | Top 30 defensive efficiency = required |
-| Champion KenPom range | Top 1-6 every year |
-| Champion AdjEM floor | +25 minimum — most above +29 |
-| Universal champion trait | Top 25 AdjO AND top 25 AdjD (every year) |
-| Best ATS bet in tourney | 5-seeds in Elite 8: 8-1 ATS since 1985 |
-| Worst ATS bet | 1-seeds in Elite 8: 43.4% ATS since 2001 |
-| Best Sweet 16 underdog ATS | Fade 5+ pt favorites: 7-15 ATS (31.8%) |
-| Best Round 64 ATS | 11-seeds vs 6-seeds: 33-19 ATS (63.5%) since 2009 |
-| Final Four winner covers | 83% of the time |
-| Dead zone (Sweet 16) | Seeds 6–9 = only 7.5% of Sweet 16 spots |
+| Defense floor | Top 30 AdjD required — sub-top-50 defenses almost never survive two rounds |
+| Champion gate | KenPom top 6 + AdjEM +25+ + AdjO top 25 + AdjD top 25 — all 6 champions met every criterion |
+| Two-way requirement | Top 25 AdjO AND top 25 AdjD = championship-level profile; every champion had both |
+| Why chalk dominates | Seeds 1–5 = 72.5% of Sweet 16 spots; Final Four is 54% 1-seeds — efficiency predicts |
+| Dead zone (Sweet 16) | Seeds 6–9 = only 7.5% of Sweet 16 spots combined |
+| 11-seed anomaly | 11-seeds appeared in Sweet 16 every single year — but nearly all are power conference mis-seeds |
 | Never happened | Seeds 13–14 reached Sweet 16/Elite 8 zero times in 6 years |
+| Cinderella ceiling | Defense-first: Elite 8 max / Balanced profile: Final Four possible |
 | Most reliable conference | ACC: 15 Sweet 16 berths in 5 years (3.0/year avg) |
 | Only mid-major lock | Gonzaga (WCC) — Sweet 16 every year studied |
+
+### Betting Reference — ATS Data (see Appendix sections below for full data)
+
+| Category | Key Finding |
+|----------|-------------|
+| Best bet in tourney | 5-seeds in Elite 8: **8-1 ATS** since 1985 |
+| Worst ATS bet | 1-seeds in Elite 8: **43.4% ATS** since 2001 |
+| Best Sweet 16 ATS | Fade 5+ pt favorites: **7-15 ATS (31.8%)** |
+| Best R64 ATS | 11-seeds vs 6-seeds: **63.5% ATS** since 2009 |
+| Final Four rule | Pick the winner — they cover **83%** of the time |
 
 ---
 
@@ -529,6 +537,8 @@ Defeated Houston 65-63. Defeated Auburn 79-73 in semifinal. AdjEM ~+36.22. Top 4
 
 ---
 
+> **📊 Betting Appendix** — ATS and totals data for wagering reference. The sections above focus on why teams advance; the sections below focus on betting market inefficiencies.
+
 ## Part 7 — ATS Edges by Round
 
 ### Round of 64 ATS
@@ -625,6 +635,8 @@ Defeated Houston 65-63. Defeated Auburn 79-73 in semifinal. AdjEM ~+36.22. Top 4
 
 ---
 
+> **📊 Betting Appendix** — ATS and totals data for wagering reference. The sections above focus on why teams advance; the sections below focus on betting market inefficiencies.
+
 ## Part 10 — Betting Model Implementation Guide
 
 ### Champion Predictor Gate (Must Meet ALL)
@@ -709,4 +721,4 @@ Defeated Houston 65-63. Defeated Auburn 79-73 in semifinal. AdjEM ~+36.22. Top 4
 ---
 
 *Research compiled February 2026. Covers 2019, 2021, 2022, 2023, 2024, 2025 NCAA Tournaments.*
-*For NCAAB betting model development. See also: README.md (Sweet 16 only) and ELITE8_FINAL4_ANALYSIS.md (Elite 8/Final Four only).*
+*Statistical analysis of why teams advance (Parts 1–9) with Betting Appendix (Parts 7, 10). See also: R64_R32_ANALYSIS.md (R64/R32 deep dive) and ELITE8_FINAL4_ANALYSIS.md (Elite 8/Final Four only).*
