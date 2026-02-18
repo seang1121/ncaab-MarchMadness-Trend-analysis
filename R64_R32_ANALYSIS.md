@@ -459,6 +459,10 @@ Based on confirmed game results across all 6 tournaments (192 total R64 games = 
 | **1-seeds vs 16-seeds** | Massive favorites; 16-seeds actually cover ~40-45% ATS despite 2% SU win rate | Avoid laying 20+ pts on 1-seeds in R64 | Moderate |
 | **8/9 seed games** | Near-coin flip SU; moderate chalk lean ATS (higher seed usually -1 to -3) | Falls into small chalk dead zone — avoid | Moderate |
 | **5-seeds after big regular season win total** | Historically weak ATS performers in R64 — 12-seeds specifically target them | Add as fade signal | Moderate |
+| **13-seeds vs 4-seeds** | All-time near dead-even (56-55-1 ATS); **since 2018: 16-8 ATS (66.6%)** — most market-inefficient chalk matchup | Strong underdog lean | High |
+| **1-seeds recent fade (R64)** | 1-seeds went only **6-10 ATS** in last 4 tournaments in R64 — market now overprices 1-seeds | Do NOT bet 1-seeds to cover in R64 vs 16-seeds | Moderate |
+| **All underdogs in R64 (since 2015)** | **136-115-2 (54.2% ATS)** — sustained decade-long signal | Lean underdog as base in any R64 without other signal | Moderate |
+| **First Four winners in R64** | **35-3 ATS (92.1%)** since 2013 — play-in game survivors punch above weight | Auto-bet First Four winners in R64 | Very High |
 | **Conference tournament champion vs at-large** | Conference tournament champions win R64 games at slightly higher rate (built-in momentum signal) | Minor positive bias for tournament champs | Low |
 
 ### Round of 32 ATS
@@ -472,6 +476,8 @@ Based on confirmed game results across all 6 tournaments (192 total R64 games = 
 | **Teams winning R64 by 20+** | 66-28 SU in R32 but only 39-54 ATS vs opponents who didn't dominate | Strong SU, fade on spread | Moderate |
 | **Double-digit seeds vs 5-7-seed opponents in R32** | 5-21 SU, 8-15-3 ATS (34.8%) | Fade Cinderellas facing 5-7 seeds | High |
 | **Double-digit vs double-digit in R32** | 12-2 SU and ATS for better seed since 2001 | Take the better seed when 2 double-digits meet | High |
+| **10 and 11-seeds in R32 (not 12-15)** | **13-5 ATS since 2016** — these are legitimate top-50 teams, not Cinderellas | Bet 10/11-seeds that advanced to R32 ATS | High |
+| **12-15 seeds in R32 vs 5-7 seed opponents** | 5-22 SU, 8-16-3 ATS (33.3%) since 2001 — distinct from 10/11-seeds | Hard fade — these DO NOT cover | Very High |
 | **11-seeds in R32 after winning R1** | ~71% Sweet 16 rate in this window — these aren't flukes | Take 11-seeds who won R1 to also cover R32 | Moderate |
 
 ---
@@ -542,8 +548,19 @@ Every team seeded 12-15 that won a Round of 64 game from 2019-2025, their profil
 | Blowout risk | High | 1-seeds especially create lopsided scoring games that suppress Overs |
 | Market adjustment | Totals still set near regular-season pace | Creates sustained Under value |
 
+**Matchup-Specific Totals Records (Confirmed ATS Data):**
+
+| Matchup | Total Lean | Record | Notes |
+|---------|-----------|--------|-------|
+| **6 vs 11** | UNDER | **39-19-2 (67.2%)** | When 6-seed is favored by 4+ points: **20-5-1 (80%) Under** — single best totals trigger in tournament |
+| **8 vs 9** | OVER | **19-of-29 (65.5%)** | Only matchup where Over is profitable; evenly matched teams play hard offense |
+| **All R64 (since 2018)** | UNDER | ~57.5% Under | Over is 119-144 (45.2%) since 2018; tournament has not been profitable for Over since 2017 |
+| **R64 last 2 tournaments** | UNDER | 45-26-1 (63.4%) | Sharpest recent data; coaching conservatism at peak |
+
 **Totals Model Recommendation:**
 - R64: Lean Under as base, especially in games with a 1, 2, or 3-seed — defensive preparation is maximized
+- **6v11 specifically:** Strong Under with extra confidence when spread is 4+
+- **8v9 specifically:** Only matchup where Over is the data-backed play
 - R32: Strong Under lean; teams have seen each other now, coaching adjustments dominate
 - Exception: High-pace programs (above 75 possessions/game) playing each other — consider market
 
@@ -851,13 +868,19 @@ Step 5: Standard seed matchup signal
 | Bet | Historical Record | Efficiency Filter | Filtered Record | Action |
 |-----|------------------|-------------------|----------------|--------|
 | All 12-seeds vs 5-seeds | 61-48-2 (55.96%) | Only 12-seeds inside top 60 KenPom | ~65%+ | Strong play |
-| 11-seeds vs 6-seeds | 63.5% ATS | Power conf 11-seeds (top 40 KenPom) | ~70%+ | Auto-lean |
-| Small chalk -1 to -3 (any matchup) | 39.5% ATS | No filter needed — dead zone universally | 39.5% | Never bet |
+| 11-seeds vs 6-seeds | 74-52-2 (60%) since 2005 | Power conf 11-seeds (top 40 KenPom) | ~70%+ | Auto-lean |
+| 13-seeds vs 4-seeds since 2018 | **16-8 (66.6%)** | All 13-seeds — near dead-even all-time inflated by recent years | 66.6% | Strong lean |
+| Small chalk -1 to -3 (any matchup) | 43-66-4 (39.5%) since 2009 | No filter needed — dead zone universally | 39.5% | Never bet |
 | Defense-first underdogs (AdjD top 40) | ~55% cover even in losses | All matchups | ~55–60% | Reliable ATS |
 | KenPom inversions | N/A (new signal) | Lower seed outranks higher seed | **60%+ outright** | High confidence |
+| First Four winners in R64 | 35-3 (92.1%) since 2013 | Auto-bet | 92.1% | Highest confidence |
+| 1-seeds in R64 (last 4 tournaments) | 6-10 ATS | Do not bet 1-seeds to cover | 37.5% recently | Fade signal |
 | R32 Cinderellas (12-15 seeds after R1 win) | 0-10 ATS since 1998 | No efficiency filter needed | 0-10 | Auto-fade |
+| R32 10/11-seeds (not 12-15) | **13-5 ATS since 2016** | Legitimate top-50 teams in disguise | 72% | Strong bet |
 | R32 favorites (all) | 68.75% ATS (2024) | General chalk lean | 60–65% | Moderate lean |
-| R32 game totals | 63–67% Under (2021–2025) | — | Strong Under | Lean Under |
+| 6v11 game totals | 39-19-2 Under (67.2%) | When 6-seed favored by 4+: 80% Under | 67–80% | Strong Under |
+| 8v9 game totals | 19-of-29 Over (65.5%) | Only matchup to bet the Over | 65.5% | Strong Over |
+| All R64 game totals (since 2018) | 45.2% Over rate | — | Strong Under | Lean Under |
 
 ---
 

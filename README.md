@@ -29,10 +29,16 @@
 | Worst ATS bet | Small chalk -1 to -3: **39.5% ATS** — worst segment in all of March |
 | KenPom inversion | Lower seed ranked higher in KenPom than opponent: **60%+ outright win rate** |
 | Round 32 rule | Fade R1 Cinderellas (12-15 seeds that won R1): **0-10 ATS** since 1998 |
+| Round 32 lean | 10/11-seeds that won R1: **13-5 ATS since 2016** — back them in R32 |
 | Round 32 lean | Back favorites — **68.75% ATS** in 2024 |
-| Totals lean | Under ~67% in R64 + R32 — coaching gets conservative |
+| Totals (6v11) | Under **39-19-2 (67.2%)** — when 6-seed favored by 4+: **80% Under** |
+| Totals (8v9) | Over **19-of-29 (65.5%)** — only matchup to bet the Over |
+| Totals lean | All other R64: Under ~63-67% — coaching gets conservative |
 | Upset profile | Defense-first underdogs (AdjD top 40) cover **~55-60% ATS** even when they lose |
 | 12-seed all-time | 61-48-2 ATS (**55.96%**) — durable market inefficiency |
+| 13-seed hot streak | **16-8 ATS (66.6%) since 2018** — most undervalued chalk matchup |
+| First Four winners | **35-3 ATS (92.1%)** in R64 since 2013 — auto-bet |
+| 1-seeds recent fade | **6-10 ATS** in last 4 tournaments R64 — overpriced in the line |
 | Elite 8 floor | Need KenPom top 20 + AdjEM +20+ to reach Elite 8 (**87-90% of Elite 8 teams**) |
 
 ### Sweet 16
