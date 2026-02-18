@@ -12,10 +12,11 @@
 | File | What It Covers | Years |
 |------|----------------|-------|
 | [COMPLETE_MARCH_MADNESS_ANALYSIS.md](./COMPLETE_MARCH_MADNESS_ANALYSIS.md) | Full bracket — Sweet 16 + Elite 8 + Final Four combined in one doc | 2019–2025 |
+| [R64_R32_ANALYSIS.md](./R64_R32_ANALYSIS.md) | Deep dive — R64 + R32 only, upset patterns, ATS edges, Cinderella efficiency profiles, Elite 8 comparison | 2019–2025 |
 | [ELITE8_FINAL4_ANALYSIS.md](./ELITE8_FINAL4_ANALYSIS.md) | Deep dive — Elite 8 and Final Four only, champion profiles, ATS edges | 2019–2025 |
 | [SWEET16_ANALYSIS.md](./SWEET16_ANALYSIS.md) | Deep dive — Sweet 16 only, seed distribution, conference trends, Cinderella traits | 2019–2024 |
 
-**Start with `COMPLETE_MARCH_MADNESS_ANALYSIS.md`** if you want everything in one place. Use the individual files for deep research on specific rounds.
+**Start with `COMPLETE_MARCH_MADNESS_ANALYSIS.md`** if you want everything in one place. Use the individual files for deep research on specific rounds. **`R64_R32_ANALYSIS.md` is the most complete betting model file** — it includes efficiency tiers, KenPom upset thresholds, and the decision tree for evaluating any R64 underdog.
 
 ---
 
@@ -26,9 +27,13 @@
 |---------|--------|
 | Best ATS bet | 11-seeds vs 6-seeds: **63.5% ATS** since 2009 |
 | Worst ATS bet | Small chalk -1 to -3: **39.5% ATS** — worst segment in all of March |
+| KenPom inversion | Lower seed ranked higher in KenPom than opponent: **60%+ outright win rate** |
 | Round 32 rule | Fade R1 Cinderellas (12-15 seeds that won R1): **0-10 ATS** since 1998 |
 | Round 32 lean | Back favorites — **68.75% ATS** in 2024 |
 | Totals lean | Under ~67% in R64 + R32 — coaching gets conservative |
+| Upset profile | Defense-first underdogs (AdjD top 40) cover **~55-60% ATS** even when they lose |
+| 12-seed all-time | 61-48-2 ATS (**55.96%**) — durable market inefficiency |
+| Elite 8 floor | Need KenPom top 20 + AdjEM +20+ to reach Elite 8 (**87-90% of Elite 8 teams**) |
 
 ### Sweet 16
 | Finding | Detail |
