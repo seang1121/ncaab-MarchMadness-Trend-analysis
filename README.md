@@ -2,8 +2,7 @@
 
 > 6-year research report covering every round of the NCAA Tournament across 2019, 2021, 2022, 2023, 2024, and 2025.
 > *(2020 cancelled due to COVID-19)*
-> Goal: identify the statistical profiles, ATS edges, and Cinderella traits that predict advancement at every stage — Sweet 16 through champion.
-> Intended for use in NCAAB betting model development.
+> Goal: analyze the statistical profiles, efficiency thresholds, and game-level factors that explain why teams advance at every stage — R64 through champion. ATS/betting data is included in appendix sections of each file.
 
 ---
 
@@ -11,12 +10,12 @@
 
 | File | What It Covers | Years |
 |------|----------------|-------|
-| [COMPLETE_MARCH_MADNESS_ANALYSIS.md](./COMPLETE_MARCH_MADNESS_ANALYSIS.md) | Full bracket — Sweet 16 + Elite 8 + Final Four combined in one doc | 2019–2025 |
-| [R64_R32_ANALYSIS.md](./R64_R32_ANALYSIS.md) | Deep dive — R64 + R32 only — Why teams win (statistical + efficiency analysis) and Betting Appendix (ATS/totals data) | 2019–2025 |
-| [ELITE8_FINAL4_ANALYSIS.md](./ELITE8_FINAL4_ANALYSIS.md) | Deep dive — Elite 8 and Final Four only, champion profiles, ATS edges | 2019–2025 |
-| [SWEET16_ANALYSIS.md](./SWEET16_ANALYSIS.md) | Deep dive — Sweet 16 only, seed distribution, conference trends, Cinderella traits | 2019–2024 |
+| [COMPLETE_MARCH_MADNESS_ANALYSIS.md](./COMPLETE_MARCH_MADNESS_ANALYSIS.md) | Full bracket — all rounds in one doc — Why teams win at each stage (Part A) + Betting Appendix | 2019–2025 |
+| [R64_R32_ANALYSIS.md](./R64_R32_ANALYSIS.md) | R64 + R32 deep dive — Why teams win (Parts A–C: statistical factors, Cinderella case studies, favorite warning signs) + Betting Appendix | 2019–2025 |
+| [ELITE8_FINAL4_ANALYSIS.md](./ELITE8_FINAL4_ANALYSIS.md) | Elite 8 + Final Four deep dive — Why teams reach Elite 8/Final Four and why champions win (Parts A–C) + Betting Appendix | 2019–2025 |
+| [SWEET16_ANALYSIS.md](./SWEET16_ANALYSIS.md) | Sweet 16 deep dive — Why teams reach Sweet 16 (Part A: efficiency cliff, dead zone, Cinderella profiles) + Betting Appendix | 2019–2024 |
 
-**Start with `COMPLETE_MARCH_MADNESS_ANALYSIS.md`** if you want everything in one place. Use the individual files for deep research on specific rounds. **`R64_R32_ANALYSIS.md` is the most analytically complete file** — it covers why teams win statistically (efficiency cliffs, Cinderella case studies, favorite warning signs) and includes a full Betting Appendix with efficiency tiers, KenPom upset thresholds, and the ATS decision tree.
+**Start with `COMPLETE_MARCH_MADNESS_ANALYSIS.md`** if you want everything in one place. All four files now follow the same structure: statistical analysis of why teams win is the primary content, with ATS/betting data in clearly labeled appendix sections. Use the individual files for round-specific deep research — each has dedicated "Why teams win/advance" analytical sections alongside the betting data.
 
 ---
 
@@ -48,33 +47,58 @@
 | First Four winners | **35-3 ATS (92.1%)** in R64 since 2013 |
 
 ### Sweet 16
+
+**Why Teams Reach Sweet 16 — Statistical**
 | Finding | Detail |
 |---------|--------|
-| Best predictor | KenPom top 25 = **~80% Sweet 16 rate** |
-| Defense floor | Top 30 AdjD = required to be a legitimate contender |
-| Dead zone | Seeds 6–9 = only **7.5% of Sweet 16 spots** combined |
-| 11-seed anomaly | An 11-seed appeared in the Sweet 16 **every single year** studied |
+| Efficiency cliff | R32→Sweet 16 steepest jump: AdjEM must rise from +14 to **+22+** |
+| Defense floor | AdjD top 40 required — sub-top-50 defenses almost never survive two rounds |
+| Dead zone | Seeds 6–9 = only **7.5% of Sweet 16 spots** — bracket position problem, not talent |
+| 11-seed anomaly | Appeared every single year — almost all are power conference mis-seeds (KenPom 25–40) |
 | Never happened | Seeds 13–14 have **NEVER** made the Sweet 16 in these 6 years |
+| True Cinderella profile | AdjD top 30 + slow tempo + opponent's defensive weakness — all three 15-seeds that advanced fit this |
+
+**Betting Reference**
+| Finding | Detail |
+|---------|--------|
 | Best ATS fade | 5+ pt Sweet 16 favorites: **7-15 ATS (31.8%)** since 2017 |
 | Best ATS back | 4-6 pt Sweet 16 underdogs: **56.7% ATS** since 1990 |
 | All underdogs | Sweet 16 underdogs overall: **57.6% ATS** since 2011 |
 
 ### Elite 8
+
+**Why Teams Reach Elite 8 — Statistical**
 | Finding | Detail |
 |---------|--------|
-| Best bet in tourney | 5-seeds in Elite 8: **8-1 ATS** since 1985 — auto-buy |
+| Two-way requirement | Top 25 AdjO AND AdjD near-universal — one-dimensional teams get exposed here |
+| Extreme Team warning | Top-10 one metric, outside top-50 other: **0 championships in 22 years** |
+| Efficiency floor | 87.5% of Elite 8 teams inside KenPom top 20; avg AdjEM **+25.1** |
+| Cinderella cap | Defense-first teams max out at Elite 8 — exposed when facing both elite AdjO and AdjD |
+| Sub-top-35 rate | Only **3 of 48 Elite 8 teams** (6.25%) came from outside KenPom top 35 in 6 years |
+
+**Betting Reference**
+| Finding | Detail |
+|---------|--------|
+| Best bet in tourney | 5-seeds in Elite 8: **8-1 ATS** since 1985 |
 | Fade | 1-seeds in Elite 8: **43.4% ATS** since 2001 |
 | Underdogs | All Elite 8 underdogs: **57% ATS** all-time |
-| Mid-major edge | Non-power conference teams in Elite 8: **60% ATS** since 2003 |
 | Chalk trap | Elite 8 favorites under 5 pts: **1-10-1 ATS (9%)** recently |
-| Both teams seed 3+ | Take the higher seed number: **8-2 ATS** since 2013 |
 
 ### Final Four
+
+**Why Champions Win — Statistical**
 | Finding | Detail |
 |---------|--------|
-| Best rule | Pick the winner — they cover **83%** of the time (35-7-2 ATS since 2001) |
+| AdjEM floor | +25 required for Final Four — below +20 is a structural long shot regardless of seed |
+| Champion gate | KenPom top 6 + AdjO top 25 + AdjD top 25 — **unbroken across every champion in the KenPom era** |
+| Three paths to title | Efficiency dominance (UConn ×2) / Two-way balance + variance absorbers (Virginia, Florida) / Depth + adaptability (Kansas, Baylor) |
+| Winner covers | Final Four winners cover **83% of the time** — structural confidence advantage |
+
+**Betting Reference**
+| Finding | Detail |
+|---------|--------|
+| Best rule | Pick the winner — **83% ATS** (35-7-2 since 2001) |
 | Best conference | ACC teams in Final Four: **10-6 ATS** since 2001 |
-| 1-seeds | Dominant SU (favorites 5+ win 19-3) but moderate ATS (13-8-1) |
 | Underdogs | Cover more than they win: **12-9-1 ATS, 6-16 SU** |
 
 ---
@@ -171,4 +195,4 @@ Teams that made Elite 8 or deeper without being from a power conference all shar
 ---
 
 *Research compiled February 2026. Data covers 2019, 2021, 2022, 2023, 2024, 2025 NCAA Tournaments.*
-*All files intended for NCAAB betting model development.*
+*All four files: statistical analysis of why teams win is primary content; ATS/betting data in clearly labeled appendix sections.*
