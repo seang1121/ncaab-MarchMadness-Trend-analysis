@@ -16,30 +16,36 @@
 | [ELITE8_FINAL4_ANALYSIS.md](./ELITE8_FINAL4_ANALYSIS.md) | Deep dive — Elite 8 and Final Four only, champion profiles, ATS edges | 2019–2025 |
 | [SWEET16_ANALYSIS.md](./SWEET16_ANALYSIS.md) | Deep dive — Sweet 16 only, seed distribution, conference trends, Cinderella traits | 2019–2024 |
 
-**Start with `COMPLETE_MARCH_MADNESS_ANALYSIS.md`** if you want everything in one place. Use the individual files for deep research on specific rounds. **`R64_R32_ANALYSIS.md` is the most complete betting model file** — it includes efficiency tiers, KenPom upset thresholds, and the decision tree for evaluating any R64 underdog.
+**Start with `COMPLETE_MARCH_MADNESS_ANALYSIS.md`** if you want everything in one place. Use the individual files for deep research on specific rounds. **`R64_R32_ANALYSIS.md` is the most analytically complete file** — it covers why teams win statistically (efficiency cliffs, Cinderella case studies, favorite warning signs) and includes a full Betting Appendix with efficiency tiers, KenPom upset thresholds, and the ATS decision tree.
 
 ---
 
 ## Quick Reference — Top Findings By Round
 
 ### Round of 64 / Round of 32
+
+**Why Teams Win — Statistical**
+| Finding | Detail |
+|---------|--------|
+| Defense floor | AdjD top 40 required for any Sweet 16+ run — every exception exited in R32 |
+| Efficiency cliff | R32→Sweet 16 is the steepest jump: AdjEM must rise from +14 to +22+ |
+| Why chalk dominates R32 | Cinderella R64 wins rely on AdjEM gaps + luck; regression hits hard in R32 |
+| Why favorites lose | Defensive weakness relative to seed — Kentucky 2022 (AdjD weak for 2-seed) and 2024 (AdjD #109 for 3-seed) both lost |
+| KenPom inversion | Lower seed ranked higher overall: **60%+ outright win rate** — not a real upset by efficiency |
+| Extreme Team warning | Top 10 one metric, outside top 50 other: **0 championships in 22 years** |
+| Cinderella ceiling | Defense-first: Elite 8 max / Balanced: Final Four possible / Offense-first: R32 max |
+| Elite 8 floor | KenPom top 20 + AdjEM +20+ required (**87-90% of Elite 8 teams**) |
+
+**Betting Reference — ATS**
 | Finding | Detail |
 |---------|--------|
 | Best ATS bet | 11-seeds vs 6-seeds: **63.5% ATS** since 2009 |
-| Worst ATS bet | Small chalk -1 to -3: **39.5% ATS** — worst segment in all of March |
-| KenPom inversion | Lower seed ranked higher in KenPom than opponent: **60%+ outright win rate** |
-| Round 32 rule | Fade R1 Cinderellas (12-15 seeds that won R1): **0-10 ATS** since 1998 |
-| Round 32 lean | 10/11-seeds that won R1: **13-5 ATS since 2016** — back them in R32 |
-| Round 32 lean | Back favorites — **68.75% ATS** in 2024 |
-| Totals (6v11) | Under **39-19-2 (67.2%)** — when 6-seed favored by 4+: **80% Under** |
+| Worst ATS bet | Small chalk -1 to -3: **39.5% ATS** — dead zone |
+| R32 rule | Fade R1 Cinderellas (12-15 seeds): **0-10 ATS** since 1998 |
+| R32 lean | 10/11-seeds that won R1: **13-5 ATS since 2016** |
+| Totals (6v11) | Under **39-19-2 (67.2%)** — when 6-seed favored 4+: **80% Under** |
 | Totals (8v9) | Over **19-of-29 (65.5%)** — only matchup to bet the Over |
-| Totals lean | All other R64: Under ~63-67% — coaching gets conservative |
-| Upset profile | Defense-first underdogs (AdjD top 40) cover **~55-60% ATS** even when they lose |
-| 12-seed all-time | 61-48-2 ATS (**55.96%**) — durable market inefficiency |
-| 13-seed hot streak | **16-8 ATS (66.6%) since 2018** — most undervalued chalk matchup |
-| First Four winners | **35-3 ATS (92.1%)** in R64 since 2013 — auto-bet |
-| 1-seeds recent fade | **6-10 ATS** in last 4 tournaments R64 — overpriced in the line |
-| Elite 8 floor | Need KenPom top 20 + AdjEM +20+ to reach Elite 8 (**87-90% of Elite 8 teams**) |
+| First Four winners | **35-3 ATS (92.1%)** in R64 since 2013 |
 
 ### Sweet 16
 | Finding | Detail |
