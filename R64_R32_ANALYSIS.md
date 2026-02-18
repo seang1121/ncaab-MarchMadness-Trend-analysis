@@ -660,6 +660,60 @@ If 4+ boxes checked: consider the double-digit seed ATS. If fewer than 3: only b
 
 ---
 
+### AdjEM Gap by Seed Matchup
+
+The AdjEM gap between the two teams is the fastest way to assess upset probability:
+
+| Matchup | Avg AdjEM Gap | Upset Rate | Betting Zone |
+|---------|--------------|-----------|-------------|
+| 1 vs 16 | ~35 points | <1% | Lay any number; ATS depends on spread size |
+| 2 vs 15 | ~24–25 pts | ~4% | Safe SU; ATS spread-dependent |
+| 3 vs 14 | ~18–19 pts | ~14% | Manageable; 3-seeds in low-total games (<140) go 34-18 ATS (65%) |
+| 4 vs 13 | ~15 pts | ~21% | Moderate; 13-seed ATS 66.6% since 2018 |
+| 5 vs 12 | ~9 pts | ~36% | **Most mispriced matchup** — market overvalues 5-seed seeding vs efficiency |
+| 6 vs 11 | ~6–8 pts | ~39% | High upset risk; 11-seed 74-52-2 ATS (60%) since 2005 |
+| 7 vs 10 | ~4–6 pts | ~40% | Near coin flip |
+| 8 vs 9 | ~0–3 pts | ~48% | True coin flip — lean Over (65.5%) |
+
+**Gap rule of thumb:**
+- Gap **>20 AdjEM**: Upset rate <5%; back favorite SU, evaluate ATS by spread size
+- Gap **5–12**: High-action zone; 25–40% upset rate; **most exploitable for underdog ATS**
+- Gap **<5**: Coin flip regardless of seeding; back underdog ATS (line still reflects seed, not efficiency)
+
+---
+
+### AdjO vs AdjD: Which Predicts Tournament Wins More?
+
+Based on NCAA.com's 9-year correlation analysis (2009–2018): **Offense is ~50% more predictive than defense for tournament wins in early rounds.**
+
+- **17 of the last 20 champions** finished top 10 in AdjO
+- Champion offenses averaged ~#21 AdjO; champion defenses averaged ~#42 AdjD
+- **UConn 2014** (AdjD #12, AdjO #57) is the only modern exception — defense-only champions are outliers
+
+**By round:**
+- **R64/R32:** Weight AdjO more for pick selection
+- **Sweet 16+ futures:** Weight AdjD heavily — every Final Four team since 2002 had AdjD inside top 50
+
+**"Extreme Teams" warning — zero championships in 22 years:**
+> Teams ranking **top 10 in one metric but outside top 50 in the other** are auto-fades. 155 such teams entered since 2002: **zero championships, only 4 Final Fours (2.6%).**
+
+If a team has an elite offense but a terrible defense (or vice versa), their tournament floor is much lower than their overall KenPom rank suggests. The market prices their single elite dimension too heavily.
+
+---
+
+### Final Four Historical Efficiency Benchmark
+
+| Metric | Value | Source |
+|--------|-------|--------|
+| Average Final Four KenPom rank (since 2003) | **11.38** | CBS Sports analysis |
+| Final Four teams with AdjD outside top 50 | Only 5 of 76 total | 2003–2025 |
+| Final Four teams with AdjO outside top 50 | Only 8 of 76 total | 2003–2025 |
+| Probability of reaching Final Four from outside top 40 KenPom | **<5%** | Historical base rate |
+
+**Use as futures filter:** If a team enters ranked outside the top 40 KenPom, there is a <5% historical probability they reach the Final Four. Betting them in futures is structurally poor value.
+
+---
+
 ### "Magic Cutoff" Points — Minimum Thresholds by Round
 
 | Metric | R64 Baseline | R32 Baseline | Sweet 16 Baseline | Elite 8 Baseline | Elite 8 (No Cinderella) |
@@ -867,6 +921,11 @@ Step 5: Standard seed matchup signal
 
 | Bet | Historical Record | Efficiency Filter | Filtered Record | Action |
 |-----|------------------|-------------------|----------------|--------|
+| **1-seeds favored 25.5+ points** | **21-14 ATS (60%)** | Line is so large it reflects actual gap | 60% | Lean favorite |
+| **1-seeds favored 19–25 points** | **14-24 ATS (36.8%)** | Market over-prices 1-seeds in this zone | 36.8% | **Auto-fade** |
+| **1-seeds favored 18.5 or less** | **8-1 ATS (89%)** | Line undervalues actual efficiency gap | 89% | Strong favorite |
+| **5-seeds as 6-point favorites** | **8-16-2 ATS (33.3%)** | 12-seed typically 6 pts but has ~36% SU upset rate | 33.3% | Fade 5-seeds |
+| **3-seeds in low-total games (<140)** | **34-18 ATS (65.4%)** | Defensive identity games favor 3-seed covering | 65.4% | Back 3-seed |
 | All 12-seeds vs 5-seeds | 61-48-2 (55.96%) | Only 12-seeds inside top 60 KenPom | ~65%+ | Strong play |
 | 11-seeds vs 6-seeds | 74-52-2 (60%) since 2005 | Power conf 11-seeds (top 40 KenPom) | ~70%+ | Auto-lean |
 | 13-seeds vs 4-seeds since 2018 | **16-8 (66.6%)** | All 13-seeds — near dead-even all-time inflated by recent years | 66.6% | Strong lean |
@@ -906,6 +965,14 @@ Before betting any 10–15 seed ATS in Round of 64:
 - [ ] Lost in conference tournament first round
 - [ ] Weak turnover margin
 - [ ] Playing a Tier 1 team (KenPom top 10, AdjEM +26+)
+
+**"Extreme Team" Flag (applies to FAVORITES, not underdogs):**
+
+If the favored team (the higher seed) qualifies as an Extreme Team — top 10 nationally in AdjO OR AdjD but outside the top 50 in the other — treat this as an **elevated upset alert**:
+- 155 Extreme Teams since 2002: **zero championships, only 4 Final Fours**
+- Elite offense + bad defense = one-dimensional team that opponents eventually solve
+- Elite defense + bad offense = stalls out when it needs to score against top-25 defenses
+- The Extreme Team signal is most useful for R64: bet the underdog ATS when the favorite is an Extreme Team
 
 **If 4+ green flags:** Strong bet on underdog ATS
 **If 2–3 green flags:** Lean underdog, need spread analysis (avoid -1 to -3 dead zone if it flips)
