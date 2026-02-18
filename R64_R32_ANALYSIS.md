@@ -2,24 +2,33 @@
 
 > 6-year research report analyzing every Round of 64 and Round of 32 across the 2019, 2021, 2022, 2023, 2024, and 2025 NCAA Tournaments.
 > *(2020 tournament was cancelled due to COVID-19)*
-> Goal: identify upset patterns, ATS edges, conference performance, and seed-level trends that are directly actionable for betting model development.
+> Goal: analyze the statistical trends, efficiency profiles, and game-level factors that explain why teams won and advanced through the bracket. Betting/ATS data is included in appendix sections.
 
 ---
 
 ## Quick Reference — Top Findings
 
+### Why Teams Win — Statistical Trends
+
 | Category | Key Finding |
 |----------|-------------|
-| Best R64 underdog play | 11-seeds vs 6-seeds: 63.5% ATS since 2009 — most durable first-round edge |
-| Worst R64 bet | Small chalk (-1 to -3 point favorites): 39.5% ATS since 2009 — dead zone |
-| Fade signal in R32 | R1 Cinderellas (12-15 seeds that won): 0-10 ATS in R2 since 1998 |
-| Best R32 lean | Back chalk in Round of 32 — favorites 68.75% ATS in 2024 |
-| Totals lean | Under hits ~63-67% in early tournament rounds since 2018 |
-| Most volatile R64 matchup | 12-seed vs 5-seed: upsets in 33 of last 39 tournaments, ~35% SU win rate |
-| Most reliable R64 matchup | 1-seed vs 16-seed: 139-2 all-time SU; 2 upsets ever (UMBC 2018, FDU 2023) |
-| R64 upset volume | Range: 3 upsets (2025) to 7 upsets (2021) in these 6 years |
-| Conference leader | SEC 8-0 in Round of 64 in 2025 — set NCAA record; Big Ten matched it |
-| Never made R32 | 16-seeds: 2-of-24 R64 wins led to R32 appearances; all-time record ~1% |
+| Most reliable advancement signal | AdjD top 40 — required floor for any Sweet 16+ run |
+| Biggest efficiency jump | R32→Sweet 16 is the steepest cliff: AdjEM must jump from +14 to +22+ |
+| Why chalk dominates R32 | Cinderellas (12-15 seeds) had luck-assisted AdjEM gaps; regression corrects in R32 |
+| Defense vs offense | Offense ~50% more predictive in R64; AdjD dominates Sweet 16+ (every champion AdjD top 44) |
+| What Cinderellas share | AdjD top 40 + slow tempo + won conference tournament + upperclassman roster |
+| Why favorites lose | Defensive weakness relative to seed (Kentucky 2022 + 2024: AdjD ~79-109 for a 2/3-seed) |
+| Extreme Team warning | Top-10 one metric, outside top-50 other = 0 championships in 22 years |
+| Conference | 2025: Big Ten + SEC each 8-0 in R64 — both metrics AND records aligned |
+
+### Betting Reference — ATS Data (see Appendix sections below for full data)
+
+| Category | Key Finding |
+|----------|-------------|
+| Best underdog ATS | 11-seeds vs 6-seeds: 63.5% ATS |
+| Worst ATS spot | Small chalk -1 to -3: 39.5% — dead zone |
+| R32 fade rule | R1 Cinderellas (12-15 seeds): 0-10 ATS in R32 since 1998 |
+| Best totals spot | 6v11 Under: 67.2% / 8v9 Over: 65.5% |
 
 ---
 
@@ -446,6 +455,85 @@ Based on confirmed game results across all 6 tournaments (192 total R64 games = 
 
 ---
 
+## Part A — Why Teams Win: Statistical Factors by Round
+
+### A1 — What R64 Winners Had in Common (Across All 6 Tournaments)
+
+| Factor | Why It Mattered | Evidence |
+|--------|----------------|---------|
+| **AdjD top 40** | Defense is the floor for any sustained run — teams outside top 40 exit in R32 | Every team reaching Sweet 16+ had AdjD inside top 40 except Oral Roberts (AdjD #285 — exited R32) |
+| **Turnover forcing** | Creating turnovers breaks down opponent's offense faster than anything else in short-possession tournament games | Abilene Christian forced 23 Texas turnovers and won 53-52; UC Irvine was #1 nationally in 2-point defense and turnover forcing |
+| **Tempo control** | Slow-tempo teams reduce total possessions per game — this compresses variance and gives defensive teams more impact per possession | Princeton, Saint Peter's, North Texas, UC Irvine all played under 70 possessions/game |
+| **3-point defense** | In tournament games, 3-point shooting swings margins fast; holding opponents below 30% from 3 stabilizes games | Princeton limited Arizona to 4-for-25 from 3 (16%); UC Irvine limited Kansas State through disciplined perimeter defense |
+| **Balanced efficiency** | Teams with both AdjO and AdjD inside top 60 (balanced profile) can go deeper than one-dimensional teams | NC State (AdjO #48, AdjD #38), FAU (AdjO ~40, AdjD ~30) both reached Final Four |
+| **Opponent's defensive weakness** | The losing team's AdjD weakness was as important as the winner's strength | Kentucky 2022 (AdjD weak for 2-seed), Ohio State 2021 (AdjD #79 for 2-seed), Auburn 2024 (9 2H turnovers) |
+
+### A2 — Why Chalk Dominates R32 (What Happens After R64)
+
+- **Preparation advantage**: Every R32 team has two rounds of film on their opponent. Defensive schemes improve because coaching staffs have seen the opponent play in this specific tournament setting
+- **Regression to mean**: 12-15 seed R64 wins are typically enabled by AdjEM gaps smaller than expected — not by the underdog being genuinely better. In R32, the opponent is similarly qualified, removing the accidental advantage
+- **Experience separates**: Graduate transfer-heavy, upperclassman-led rosters handle R32 pressure better than young rosters. The tournament data shows veteran teams win at higher rates in their second game
+- **Who the 10/11 seeds actually are**: 10 and 11-seeds that advance are fundamentally different from 12-15 seeds. They are legitimate 30-50 KenPom range teams who were underseeded by the committee. 12-15 seed winners are often legitimately weaker teams that had matchup luck in R64
+
+### A3 — The Efficiency Cliff: What Separates Teams at Each Round
+
+| Advancement Stage | Minimum AdjEM | Min AdjD Rank | Min AdjO Rank | Key Differentiator |
+|------------------|--------------|---------------|---------------|-------------------|
+| Win R64 | +8 to +10 | Any (defense helps but not required for 1 win) | Any | Single-game variance; matchup luck sufficient |
+| Win R32 | +14 to +16 | Top 55 strongly preferred | Top 55 | Preparation advantage goes to efficient teams |
+| Reach Sweet 16 | +22 to +24 | **Top 40 required** (with rare exceptions) | Top 35 | The biggest cliff in the bracket — efficiency gap matters most here |
+| Reach Elite 8 | +22+ | Top 30 typical | Top 30 | Two-way competence required at this level |
+| Final Four | +25+ | Top 17–38 documented | Top 55 | Balanced profile dominates; defense-only teams max out here |
+
+**The R32 → Sweet 16 cliff is the most important threshold in the bracket.** The AdjEM jump required (from +14 to +22) is steeper than any other round transition. Teams in the +14 to +21 AdjEM range will advance based on their matchup; teams above +22 have a structural advantage.
+
+---
+
+## Part B — Why Cinderellas Won: Game-Level Statistical Evidence
+
+For each major Cinderella run, the specific statistical reason they won — not what their KenPom rank was, but WHAT they actually did in the game that produced the win.
+
+| Team | Year | Seeds Beaten | The Statistical Reason They Won |
+|------|------|-------------|--------------------------------|
+| **Saint Peter's** | 2022 | 2, 7, 3 | AdjD #28 nationally — elite zone defense controlled tempo and forced Kentucky (AdjD weak for 2-seed) into a half-court game. SPU won because Kentucky's own defensive weakness made it a closer game than the spread implied. Three straight games decided by 4 points or fewer — defense kept it close every time |
+| **Oral Roberts** | 2021 | 2, 7 | AdjO #25 (elite) vs Ohio State's AdjD #79 (weak for 2-seed). ORU created a shooting matchup they were built for. Beat Florida the same way. Lost to Arkansas when they finally faced a team with a real defense. Pure offense only works when the opponent can't stop you |
+| **NC State** | 2024 | 6, 3, 1, 2, 4 | KenPom #49 — the most legitimate "Cinderella" in the dataset. Won the ACC Tournament to get in. Balanced AdjO #48 / AdjD #38 = no exploitable weakness on either side. Each opponent underestimated them or played poorly in the second half. Experience and conditioning carried a late-tournament run |
+| **Princeton** | 2023 | 2, 7 | AdjD #13 nationally — best defensive rank for any 15-seed in this dataset. Held Arizona to a season-low 55 points despite shooting 4-for-25 from 3. Princeton's system generates turnovers and reduces possessions — made Arizona play at Princeton's pace, not their own |
+| **UCLA** | 2021 | 11-seed | Power conference team trapped in 11-seed position. KenPom top-20. Not a true Cinderella — committee underseeded them. Won because they were legitimately a top-25 caliber team |
+| **FAU** | 2023 | 9-seed | KenPom #17 despite being seeded 9th. Also not a true Cinderella — committee misidentified their efficiency profile. AdjO ~40, AdjD ~30 = legitimate Final Four team in a 9-seed jersey |
+
+**Three distinct reasons Cinderellas win:**
+1. **Committee seeding error** — the team is legitimately stronger than their seed (Colorado State #44 KenPom vs Memphis #50 KenPom, 2025; FAU, NC State). These aren't upsets by efficiency metrics
+2. **One elite dimension + vulnerable favorite** — team has AdjD top-30 AND the opponent has a weak AdjD for their seed tier. Saint Peter's, Princeton, UC Irvine won this way
+3. **Opponent self-destruction** — the favorite gave the game away (FDU/Purdue 2023: noise event; Yale/Auburn 2024: 9 second-half turnovers; Abilene Christian/Texas: 23 turnovers forced in pressure defense)
+
+**What separates depth of run by Cinderella type:**
+- Type 1 (misseeded): Can run deep — they were always good enough
+- Type 2 (one-dimension): Caps at Elite 8. Defense-only teams max out when they face opponents with both elite AdjO AND AdjD
+- Type 3 (opponent collapse): Exits in R32 — the opponent won't self-destruct twice
+
+---
+
+## Part C — Why Favorites Lost: Statistical Warning Signs
+
+These signals appeared in the pre-tournament data BEFORE upset losses occurred. This is the predictive framework for identifying vulnerable chalk.
+
+| Warning Sign | Statistical Threshold | Real Examples |
+|-------------|----------------------|--------------|
+| **AdjD weak relative to seed** | 2-seed AdjD outside top 40; 3-seed outside top 50; 4-seed outside top 65 | Kentucky 2022 (2-seed, AdjD weak) → Saint Peter's upset; Kentucky 2024 (3-seed, AdjD #109) → Oakland upset; Ohio State 2021 (2-seed, AdjD #79) → Oral Roberts upset |
+| **KenPom inversion** | Lower seed ranks higher on KenPom overall than higher seed | Colorado State (#44) vs Memphis (#50), 2025 — market treated as upset; efficiency said Colorado State was better |
+| **Extreme Team flag** | Top 10 one metric, outside top 50 other | 0 championships in 22 years of data; these teams get exposed when they face opponents that attack their weakness |
+| **AdjEM gap under 9** | Less than 9 point gap between seeds 5 and 12 | 5v12 average gap is ~9; when it shrinks to 5-6, upset probability climbs toward 45%+ |
+| **Turnover-prone offense** | High TO rate in regular season vs pressure defense | Texas 2021 (23 turnovers vs Abilene Christian); Auburn 2024 (9 second-half turnovers vs Yale) |
+| **Slow-tempo mismatch** | Fast-tempo favorite facing slow-tempo, defensive-identity underdog | Slow team controls pace, compresses variance, neutralizes the talent advantage through fewer possessions |
+| **Youth vs experience** | Highly-ranked freshman-heavy team vs graduate-transfer-heavy underdog | Veterans tend to outperform in high-pressure tournament settings; the talent gap narrows when experience matters most |
+
+**Kentucky's recurring pattern** — they appeared as an upset victim in 2022 (vs Saint Peter's) and 2024 (vs Oakland) with similar profiles both times: seeded 2nd/3rd but with a defensive ranking far below what that seeding typically implies. This is the clearest example of how a pre-tournament statistical flag predicts a specific result.
+
+---
+
+> **📊 Betting Appendix** — ATS and totals data for wagering reference. The sections above focus on why teams win; the sections below focus on betting market inefficiencies.
+
 ## Part 5 — ATS Edges
 
 ### Round of 64 ATS
@@ -523,6 +611,8 @@ Every team seeded 12-15 that won a Round of 64 game from 2019-2025, their profil
 
 ---
 
+> **📊 Betting Appendix** — ATS and totals data for wagering reference. The sections above focus on why teams win; the sections below focus on betting market inefficiencies.
+
 ## Part 7 — Totals Analysis (Over/Under)
 
 ### Round of 64 Totals
@@ -580,6 +670,8 @@ Every team seeded 12-15 that won a Round of 64 game from 2019-2025, their profil
 | **Double-digit seed surviving R1 = keep betting them** | The data is unambiguous: 0-10 ATS since 1998 for 12-15 seeds in R32 |
 
 ---
+
+> **📊 Betting Appendix** — ATS and totals data for wagering reference. The sections above focus on why teams win; the sections below focus on betting market inefficiencies.
 
 ## Part 9 — Recommendations for Betting Model
 
@@ -844,6 +936,8 @@ When a favored team has a **weaker AdjD than expected for their seeding**, the u
 | 5-seed | Top 40–60 | Outside top 75 | 1.3× baseline | +5% |
 
 ---
+
+> **📊 Betting Appendix** — ATS and totals data for wagering reference. The sections above focus on why teams win; the sections below focus on betting market inefficiencies.
 
 ## Part 13 — Enhanced Betting Model: Efficiency-Adjusted Triggers
 

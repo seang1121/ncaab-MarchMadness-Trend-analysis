@@ -12,7 +12,7 @@
 | File | What It Covers | Years |
 |------|----------------|-------|
 | [COMPLETE_MARCH_MADNESS_ANALYSIS.md](./COMPLETE_MARCH_MADNESS_ANALYSIS.md) | Full bracket — Sweet 16 + Elite 8 + Final Four combined in one doc | 2019–2025 |
-| [R64_R32_ANALYSIS.md](./R64_R32_ANALYSIS.md) | Deep dive — R64 + R32 only, upset patterns, ATS edges, Cinderella efficiency profiles, Elite 8 comparison | 2019–2025 |
+| [R64_R32_ANALYSIS.md](./R64_R32_ANALYSIS.md) | Deep dive — R64 + R32 only — Why teams win (statistical + efficiency analysis) and Betting Appendix (ATS/totals data) | 2019–2025 |
 | [ELITE8_FINAL4_ANALYSIS.md](./ELITE8_FINAL4_ANALYSIS.md) | Deep dive — Elite 8 and Final Four only, champion profiles, ATS edges | 2019–2025 |
 | [SWEET16_ANALYSIS.md](./SWEET16_ANALYSIS.md) | Deep dive — Sweet 16 only, seed distribution, conference trends, Cinderella traits | 2019–2024 |
 
