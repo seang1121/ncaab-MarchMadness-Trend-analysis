@@ -453,6 +453,101 @@ Defeated Houston 65-63. Defeated Auburn 79-73 in semifinal. AdjEM ~+36.22. Top 4
 
 ---
 
+## Part A — Why Teams Win and Advance at Each Stage
+
+### A1 — The Efficiency Staircase: What Each Round Requires
+
+Each round of the tournament has a distinct efficiency floor. Teams that fail to meet the threshold for their current round exit — not because they had a bad game, but because the opponent's quality exposes structural weaknesses that worked fine against weaker competition.
+
+| Stage | Min AdjEM | Min AdjD Rank | Min AdjO Rank | Key Differentiator |
+|-------|-----------|---------------|---------------|--------------------|
+| Win R64 | +8 to +10 | Any (defense helps, not required for 1 win) | Any | Single-game variance; matchup luck sufficient |
+| Win R32 | +14 to +16 | Top 55 preferred | Top 55 | Preparation advantage goes to efficient teams |
+| Reach Sweet 16 | +22 to +24 | **Top 40 required** | Top 35 | The steepest cliff — AdjEM must jump ~8 points from R32 |
+| Reach Elite 8 | +20+ (90% of teams) | Top 30 (73%) | Top 30 (71%) | Two-way competence required; one-dimensional teams get exposed |
+| Reach Final Four | +25+ | Top 17–38 documented | Top 55 | Matchup-proof efficiency; Extreme Teams cap out here |
+| Win Championship | +26 to +36 | Top 25 (all 6 champions) | Top 25 (all 6 champions) | Structural advantage over every opponent in the bracket |
+
+**The R32 → Sweet 16 cliff is the most important threshold in the bracket.** That ~8 AdjEM jump (from +14 to +22) is steeper than any other round transition. Teams in the +14 to +21 range will advance based on matchup; teams above +22 have a structural advantage.
+
+---
+
+### A2 — Why Chalk Dominates Each Round (And When It Doesn't)
+
+**Why 1-4 seeds dominate**: Seeds 1–5 hold 72.5% of Sweet 16 spots, 66% of Elite 8 spots, and 54% of Final Four spots. This is not committee luck — it is efficiency correlation. The seeding committee's primary input is NET/KenPom rank, which directly predicts advancement probability. Seeds reflect the underlying data.
+
+**Why the 6-9 dead zone exists**: Seeds 6-9 produced just 7.5% of Sweet 16 spots across 5 years — a structural bracket problem. 6-seeds face KenPom-30 11-seeds in R32. 7-seeds draw difficult R32 matchups. 8-9 seeds win a coin-flip in R1, then face a 1-seed in R32 (85-90% win rate). The path is structurally near-impossible without elite efficiency.
+
+**Why 11-seeds appear in Sweet 16 every year**: Almost all are power conference at-large teams mis-assigned to 11 by the committee — KenPom 25-40 programs seeded low due to perception bias. Ohio State (2019), UCLA (2021, KenPom top-20), Iowa State (2022), Michigan (2022), NC State (2024, won the ACC Tournament) — these aren't Cinderellas, they're mis-seeds.
+
+**Why chalk breaks down in specific spots**:
+- **R64 5v12**: AdjEM gap averages only ~9 points — the smallest gap in the bracket below the 8/9 game. Market overvalues seeding; efficiency often shows near-parity.
+- **R64 6v11**: 11-seeds cover 63.5% ATS because they're frequently better teams by efficiency. The "upset" is a seeding error being corrected.
+- **R32 after Cinderella wins**: 12-15 seeds that won R1 are 0-10 ATS in R32 since 1998. The R64 win was matchup-specific; R32 opponents are prepared and better.
+
+---
+
+### A3 — Why Cinderellas Win (And How Far Each Type Can Go)
+
+Three distinct reasons a lower seed beats a higher seed — and each type has a ceiling:
+
+**Type 1 — Committee Seeding Error** (the team is legitimately stronger than their seed):
+- Colorado State (12, KenPom #44) vs Memphis (5, KenPom #50) in 2025 — not an upset by efficiency
+- FAU (9, KenPom #17) in 2023 — reached Final Four because they were always good enough
+- NC State (11, KenPom #49) in 2024 — won the ACC Tournament, should have been seeded 6-7
+- *Ceiling*: As deep as their efficiency allows — these teams were never truly Cinderellas
+
+**Type 2 — One Elite Dimension + Vulnerable Favorite**:
+- Saint Peter's (15) 2022: AdjD #28 + Kentucky's weak AdjD for a 2-seed → elite zone defense controlled 3 straight games
+- Princeton (15) 2023: AdjD #13 + Arizona's perimeter shooting collapses → held Arizona to 55 pts on 4-for-25 from 3
+- Oral Roberts (15) 2021: AdjO #25 + Ohio State's AdjD #79 (weak for 2-seed) → scored at will until they faced a real defense
+- *Ceiling*: Elite 8 for defense-first teams; R32 for offense-only teams — the single dimension eventually faces an opponent specifically built to neutralize it
+
+**Type 3 — Opponent Self-Destruction**:
+- Abilene Christian vs Texas 2021: 23 turnovers forced by AC's pressure defense
+- Yale vs Auburn 2024: 9 second-half turnovers, Auburn collapsed
+- FDU vs Purdue 2023: noise event — Purdue was listed as -23.5 favorite
+- *Ceiling*: R32 at most — the favorite won't self-destruct a second time
+
+---
+
+### A4 — Why Favorites Lose: Pre-Tournament Warning Signs
+
+These signals appeared in public data BEFORE upset losses occurred across all 6 years:
+
+| Warning Sign | Threshold | Real Examples |
+|-------------|-----------|--------------|
+| **AdjD weak relative to seed** | 2-seed outside top 40; 3-seed outside top 50; 4-seed outside top 65 | Kentucky 2022 (2-seed, AdjD weak) → Saint Peter's; Kentucky 2024 (3-seed, AdjD #109) → Oakland; Ohio State 2021 (2-seed, AdjD #79) → Oral Roberts |
+| **KenPom inversion** | Lower seed ranks higher on KenPom than higher seed | Colorado State (#44) vs Memphis (#50), 2025 — market treated as upset; efficiency said CSU was better |
+| **Extreme Team flag** | Top-10 one metric, outside top-50 other | Zero championships in 22 years; 4 Final Fours in 155 appearances (2.6%) |
+| **AdjEM gap under 9** | Gap between 5 and 12 seed shrinks below 9 | Upset probability climbs toward 45%+ when gap narrows to 5-6 points |
+| **Turnover-prone offense vs pressure defense** | High TO rate + opponent ranks top-20 in steal rate | Texas 2021 (23 turnovers vs Abilene Christian); Auburn 2024 (9 2H turnovers vs Yale) |
+| **Youth vs experienced underdog** | Freshman-heavy blue blood vs graduate-transfer underdog | Veteran rosters outperform in high-pressure elimination settings; talent gap narrows when experience matters |
+
+---
+
+### A5 — Why Champions Win: Patterns Across All 6 Years
+
+Each champion had a structural advantage that no opponent in the bracket could neutralize:
+
+| Year | Champion | Their Unguardable Edge | Why It Held Through 6 Games |
+|------|----------|-----------------------|-----------------------------|
+| 2019 | Virginia | Pack-line defense + tempo #353/353 | Compressed games to 55-60 possessions; eliminated opponents' preferred pace |
+| 2021 | Baylor | Three interchangeable guard scorers + two-way efficiency | No single defensive assignment solved them; Gonzaga (AdjO #1) couldn't outscore Baylor |
+| 2022 | Kansas | Depth + second-half adjustment | Down 16 in the title game; bench depth and Agbaji closing gave Self options no opponent anticipated |
+| 2023 | UConn | +32 AdjEM two-way dominance | Won every game by 13+; structural efficiency advantage made individual games irrelevant |
+| 2024 | UConn | +36.4 AdjEM (highest in modern era) | +140 point differential in 6 games — most dominant tournament performance ever recorded |
+| 2025 | Florida | Top-4 AdjO + Top-4 AdjD + #1 FT rate nationally | Two-way excellence absorbed variance; FT rate and offensive rebounding won the 65-63 championship vs Houston's #1 defense |
+
+**Three structural paths to a championship:**
+1. **Efficiency dominance** (UConn 2023, 2024): AdjEM so high that no opponent is statistically close
+2. **Two-way balance + variance absorbers** (Virginia 2019, Florida 2025): Defense controls pace; free throws and rebounding absorb the one close game every champion faces
+3. **Depth + adaptability** (Kansas 2022, Baylor 2021): Multiple weapons no opponent can fully scheme for in a single game
+
+**The unbroken gate**: KenPom top 6 + AdjO top 25 + AdjD top 25. No champion outside this profile exists in the KenPom era.
+
+---
+
 ## Part 5 — Statistical Profile of Contenders
 
 ### Sweet 16 Statistical Thresholds
@@ -721,4 +816,4 @@ Defeated Houston 65-63. Defeated Auburn 79-73 in semifinal. AdjEM ~+36.22. Top 4
 ---
 
 *Research compiled February 2026. Covers 2019, 2021, 2022, 2023, 2024, 2025 NCAA Tournaments.*
-*Statistical analysis of why teams advance (Parts 1–9) with Betting Appendix (Parts 7, 10). See also: R64_R32_ANALYSIS.md (R64/R32 deep dive) and ELITE8_FINAL4_ANALYSIS.md (Elite 8/Final Four only).*
+*Statistical analysis of why teams advance at each stage (Parts A + 5–6) with Betting Appendix (Parts 7, 10). See also: R64_R32_ANALYSIS.md (R64/R32 deep dive), SWEET16_ANALYSIS.md, and ELITE8_FINAL4_ANALYSIS.md.*
