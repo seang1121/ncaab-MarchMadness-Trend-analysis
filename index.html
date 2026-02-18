@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCAAB March Madness Trend Analysis (2019–2025)</title>
+  <style>
+    :root {
+      --primary: #1a3c6e;
+      --accent: #e87722;
+      --bg: #0d1117;
+      --card: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --win: #238636;
+      --loss: #da3633;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0d1117 0%, #1a3c6e 60%, #0d1117 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px 48px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(232, 119, 34, 0.15);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 52px);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    h1 span { color: var(--accent); }
+
+    .hero-sub {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto 32px;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat-num {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--accent);
+      display: block;
+    }
+
+    .hero-stat-label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .btn:hover { opacity: 0.85; }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    /* Main content */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+    section:last-child { border-bottom: none; }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 36px;
+    }
+
+    /* Cards */
+    .grid { display: grid; gap: 16px; }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .card-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Stat highlight boxes */
+    .stat-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .stat-box .num {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--accent);
+      display: block;
+    }
+
+    .stat-box .label {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .stat-box .context {
+      font-size: 13px;
+      color: var(--text);
+      margin-top: 8px;
+      font-weight: 500;
+    }
+
+    /* Findings table */
+    .finding-list { display: flex; flex-direction: column; gap: 10px; }
+
+    .finding {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+
+    .finding-badge {
+      flex-shrink: 0;
+      background: rgba(232, 119, 34, 0.15);
+      color: var(--accent);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .finding-badge.green {
+      background: rgba(35, 134, 54, 0.15);
+      color: #3fb950;
+    }
+
+    .finding-badge.red {
+      background: rgba(218, 54, 51, 0.15);
+      color: #f85149;
+    }
+
+    .finding-text {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .finding-text strong { color: var(--accent); }
+
+    /* Champion table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th {
+      background: rgba(232, 119, 34, 0.1);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(48, 54, 61, 0.5);
+      color: var(--text);
+    }
+
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+
+    .champ-year { font-weight: 700; color: var(--accent); }
+
+    /* Gate checklist */
+    .gate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .gate-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 14px;
+    }
+
+    .gate-check {
+      width: 20px;
+      height: 20px;
+      background: rgba(35, 134, 54, 0.2);
+      border: 1px solid #238636;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 12px;
+      color: #3fb950;
+    }
+
+    /* Docs section */
+    .doc-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      text-decoration: none;
+      color: var(--text);
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      transition: border-color 0.2s;
+    }
+
+    .doc-card:hover { border-color: var(--accent); }
+
+    .doc-icon {
+      font-size: 24px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .doc-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .doc-card p { font-size: 13px; color: var(--muted); }
+
+    .doc-tag {
+      display: inline-block;
+      background: rgba(232, 119, 34, 0.1);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-top: 8px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 24px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="container">
+    <div class="hero-badge">Research Report</div>
+    <h1>NCAAB <span>March Madness</span><br>Trend Analysis</h1>
+    <p class="hero-sub">6-year deep dive into every NCAA Tournament round — why teams win, why favorites lose, and where the real ATS edges live.</p>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num">6</span>
+        <span class="hero-stat-label">Tournaments</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">2019–2025</span>
+        <span class="hero-stat-label">Years Covered</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">4</span>
+        <span class="hero-stat-label">Round Deep Dives</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">100%</span>
+        <span class="hero-stat-label">Champion Gate Accuracy</span>
+      </div>
+    </div>
+
+    <div class="btn-group">
+      <a href="COMPLETE_MARCH_MADNESS_ANALYSIS.md" class="btn btn-primary">Full Analysis</a>
+      <a href="https://github.com/seang1121/ncaab-MarchMadness-Trend-analysis" class="btn btn-secondary">View on GitHub</a>
+    </div>
+  </div>
+</div>
+
+<!-- Top ATS Edges -->
+<section>
+  <div class="container">
+    <div class="section-label">Key Findings</div>
+    <h2>Top ATS Edges by Round</h2>
+    <p class="section-sub">The highest-confidence betting edges extracted from 6 years of tournament data.</p>
+
+    <div class="grid grid-4" style="margin-bottom: 24px;">
+      <div class="stat-box">
+        <span class="num">63.5%</span>
+        <div class="label">11-seeds vs 6-seeds ATS</div>
+        <div class="context">since 2009 — best R64 bet</div>
+      </div>
+      <div class="stat-box">
+        <span class="num">92.1%</span>
+        <div class="label">First Four winners ATS</div>
+        <div class="context">35-3 since 2013 in R64</div>
+      </div>
+      <div class="stat-box">
+        <span class="num">57.6%</span>
+        <div class="label">Sweet 16 underdogs ATS</div>
+        <div class="context">since 2011 — fade big chalk</div>
+      </div>
+      <div class="stat-box">
+        <span class="num">83%</span>
+        <div class="label">Final Four winners ATS</div>
+        <div class="context">35-7-2 since 2001</div>
+      </div>
+    </div>
+
+    <div class="finding-list">
+      <div class="finding">
+        <span class="finding-badge green">Bet</span>
+        <div class="finding-text">11-seeds vs 6-seeds: <strong>63.5% ATS since 2009</strong> — most consistent first-round edge in the bracket</div>
+      </div>
+      <div class="finding">
+        <span class="finding-badge green">Bet</span>
+        <div class="finding-text">First Four winners in R64: <strong>35-3 ATS (92.1%) since 2013</strong> — battle-tested teams cover at historic rates</div>
+      </div>
+      <div class="finding">
+        <span class="finding-badge red">Fade</span>
+        <div class="finding-text">Small chalk -1 to -3 in R64: <strong>39.5% ATS</strong> — the dead zone, worst bet in the tournament</div>
+      </div>
+      <div class="finding">
+        <span class="finding-badge red">Fade</span>
+        <div class="finding-text">R1 Cinderellas (12-15 seeds) in R32: <strong>0-10 ATS since 1998</strong> — regression is automatic, fade every time</div>
+      </div>
+      <div class="finding">
+        <span class="finding-badge green">Totals</span>
+        <div class="finding-text">6v11 games: Under <strong>39-19-2 (67.2%)</strong> — when 6-seed favored 4+, Under hits 80%</div>
+      </div>
+      <div class="finding">
+        <span class="finding-badge green">Totals</span>
+        <div class="finding-text">8v9 games: Over <strong>19-of-29 (65.5%)</strong> — the only first-round matchup to bet the Over</div>
+      </div>
+      <div class="finding">
+        <span class="finding-badge red">Fade</span>
+        <div class="finding-text">Sweet 16 favorites by 5+: <strong>7-15 ATS (31.8%) since 2017</strong> — chalk trap, underdogs cover at 57.6%</div>
+      </div>
+      <div class="finding">
+        <span class="finding-badge green">Elite 8</span>
+        <div class="finding-text">5-seeds in Elite 8: <strong>8-1 ATS since 1985</strong> — best value bet in the entire tournament</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Statistical Factors -->
+<section>
+  <div class="container">
+    <div class="section-label">Statistical Analysis</div>
+    <h2>Why Teams Actually Win</h2>
+    <p class="section-sub">Efficiency thresholds and structural factors that predict advancement — not brand names or regular season records.</p>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="card-title">R64 / R32</div>
+        <h3>Defense Is the Floor</h3>
+        <p>AdjD top 40 required for any Sweet 16+ run. Every exception exited in R32. The efficiency cliff from R32 → Sweet 16 is the steepest jump in the bracket — AdjEM must rise from +14 to +22+.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Sweet 16</div>
+        <h3>The Dead Zone (Seeds 6–9)</h3>
+        <p>Seeds 6–9 account for only 7.5% of Sweet 16 spots. It's a bracket position problem, not a talent problem. The 11-seed anomaly: appeared every single year — almost all are power conference mis-seeds ranked KenPom 25–40.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Elite 8</div>
+        <h3>Two-Way or Bust</h3>
+        <p>Top 25 AdjO AND AdjD near-universal. One-dimensional teams get exposed here. Extreme Team warning: top-10 one metric, outside top-50 other = 0 championships in 22 years.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Final Four</div>
+        <h3>The Champion Gate</h3>
+        <p>KenPom top 6 + AdjEM +25+ + AdjO top 25 + AdjD top 25. Unbroken across every champion in the KenPom era. No champion since 2019 had a sub-top-6 KenPom ranking at tournament time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Champion Gate -->
+<section>
+  <div class="container">
+    <div class="section-label">Predictive Model</div>
+    <h2>Champion Predictor Gate</h2>
+    <p class="section-sub">Every champion 2019–2025 met ALL of these criteria at tournament time. Zero exceptions.</p>
+
+    <div class="gate-grid" style="margin-bottom: 40px;">
+      <div class="gate-item"><div class="gate-check">✓</div> KenPom top 6 overall rank</div>
+      <div class="gate-item"><div class="gate-check">✓</div> AdjEM above +25</div>
+      <div class="gate-item"><div class="gate-check">✓</div> AdjO top 25</div>
+      <div class="gate-item"><div class="gate-check">✓</div> AdjD top 25 — two-way required</div>
+      <div class="gate-item"><div class="gate-check">✓</div> SOS top 33 — schedule-tested</div>
+      <div class="gate-item"><div class="gate-check">✓</div> Seed 1–4 (avg champion: 1.5)</div>
+      <div class="gate-item"><div class="gate-check">✓</div> Power conference (ACC, Big 12, Big East, SEC)</div>
+      <div class="gate-item"><div class="gate-check">✓</div> Top 25 free throw attempt rate</div>
+      <div class="gate-item"><div class="gate-check">✓</div> Proven head coach</div>
+    </div>
+
+    <div class="section-label" style="margin-bottom: 12px;">Champion Profile — All 6 Years</div>
+    <div style="overflow-x: auto;">
+      <table>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Champion</th>
+            <th>Seed</th>
+            <th>Conf</th>
+            <th>KenPom</th>
+            <th>AdjEM</th>
+            <th>AdjO</th>
+            <th>AdjD</th>
+            <th>Signature</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="champ-year">2019</td>
+            <td>Virginia</td>
+            <td>1</td>
+            <td>ACC</td>
+            <td>#1</td>
+            <td>~+34</td>
+            <td>2nd</td>
+            <td>5th</td>
+            <td>Pack-line D, slowest tempo</td>
+          </tr>
+          <tr>
+            <td class="champ-year">2021</td>
+            <td>Baylor</td>
+            <td>1</td>
+            <td>Big 12</td>
+            <td>~#2</td>
+            <td>~+29</td>
+            <td>~8th</td>
+            <td>~22nd</td>
+            <td>Best 3PT team in America</td>
+          </tr>
+          <tr>
+            <td class="champ-year">2022</td>
+            <td>Kansas</td>
+            <td>1</td>
+            <td>Big 12</td>
+            <td>~#6</td>
+            <td>~+26</td>
+            <td>~15th</td>
+            <td>~12th</td>
+            <td>Erased 16-pt deficit in championship</td>
+          </tr>
+          <tr>
+            <td class="champ-year">2023</td>
+            <td>UConn</td>
+            <td>4</td>
+            <td>Big East</td>
+            <td>#1</td>
+            <td>~+32</td>
+            <td>Top 10</td>
+            <td>Top 10</td>
+            <td>Won every game by 13+ pts</td>
+          </tr>
+          <tr>
+            <td class="champ-year">2024</td>
+            <td>UConn</td>
+            <td>1</td>
+            <td>Big East</td>
+            <td>#1</td>
+            <td>+36.4</td>
+            <td>1st</td>
+            <td>11th</td>
+            <td>+140 point differential — best ever</td>
+          </tr>
+          <tr>
+            <td class="champ-year">2025</td>
+            <td>Florida</td>
+            <td>1</td>
+            <td>SEC</td>
+            <td>~#1</td>
+            <td>+36.2</td>
+            <td>~4th</td>
+            <td>~4th</td>
+            <td>Top 3 FT rate + offensive rebounding</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Docs -->
+<section>
+  <div class="container">
+    <div class="section-label">Research Files</div>
+    <h2>Full Analysis Documents</h2>
+    <p class="section-sub">Start with the complete analysis, or dive into any round for a dedicated deep dive.</p>
+
+    <div class="grid grid-2">
+      <a href="COMPLETE_MARCH_MADNESS_ANALYSIS.md" class="doc-card">
+        <div class="doc-icon">📋</div>
+        <div>
+          <h3>Complete Analysis</h3>
+          <p>Full bracket — all rounds in one doc. Statistical factors + ATS betting appendix. Start here.</p>
+          <div class="doc-tag">2019–2025 · All Rounds</div>
+        </div>
+      </a>
+      <a href="R64_R32_ANALYSIS.md" class="doc-card">
+        <div class="doc-icon">🏀</div>
+        <div>
+          <h3>R64 + R32 Deep Dive</h3>
+          <p>Why favorites lose, Cinderella case studies, statistical profiles + full ATS data by seed matchup.</p>
+          <div class="doc-tag">2019–2025 · First Two Rounds</div>
+        </div>
+      </a>
+      <a href="SWEET16_ANALYSIS.md" class="doc-card">
+        <div class="doc-icon">🎯</div>
+        <div>
+          <h3>Sweet 16 Analysis</h3>
+          <p>The efficiency cliff, dead zone (seeds 6–9), and Cinderella profiles for teams that advance.</p>
+          <div class="doc-tag">2019–2024 · Sweet 16</div>
+        </div>
+      </a>
+      <a href="ELITE8_FINAL4_ANALYSIS.md" class="doc-card">
+        <div class="doc-icon">🏆</div>
+        <div>
+          <h3>Elite 8 + Final Four</h3>
+          <p>Why champions win, two-way efficiency requirements, and the unbroken champion gate criteria.</p>
+          <div class="doc-tag">2019–2025 · Elite 8 / Final Four</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Research compiled February 2026 · Data covers 2019, 2021, 2022, 2023, 2024, 2025 NCAA Tournaments</p>
+  <p style="margin-top: 8px;"><a href="https://github.com/seang1121/ncaab-MarchMadness-Trend-analysis">GitHub Repository</a></p>
+</footer>
+
+</body>
+</html>
