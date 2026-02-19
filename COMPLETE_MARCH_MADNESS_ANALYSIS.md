@@ -36,7 +36,305 @@
 
 ---
 
-## Part 1 — Year-by-Year Full Bracket (Sweet 16 → Final Four → Champion)
+## Part 1 — Year-by-Year Round of 64 Results
+
+### 2019 — Chalk Year, Five Upsets, All 1-Seeds Win
+
+> One of the most orderly first rounds in recent history. All four 1-seeds won. Five total upsets. No 1-seed was seriously threatened.
+
+**Round of 64 Upsets** (lower seed beat higher seed)
+
+| Upset | Winner Seed | Winner Team | Loser Seed | Loser Team | Score | Region |
+|-------|-------------|-------------|------------|------------|-------|--------|
+| 13 over 4 | 13 | UC Irvine | 4 | Kansas State | 70-64 | South |
+| 12 over 5 | 12 | Murray State | 5 | Marquette | 83-64 | West |
+| 12 over 5 | 12 | Oregon | 5 | Wisconsin | 72-54 | South |
+| 11 over 6 | 11 | Ohio State | 6 | Iowa State | 62-59 | Midwest |
+| 10 over 7 | 10 | Florida | 7 | Nevada | 70-61 | West |
+
+**First-Round Summary**
+- 5 of 32 games (15.6%) won by lower seed
+- All four 1-seeds advanced: Duke (E), Virginia (S), Gonzaga (W), North Carolina (M)
+- All four 2-seeds advanced: Tennessee, Kentucky, Michigan, Michigan State
+- All four 3-seeds advanced: Texas Tech, Houston, LSU, Purdue
+- Notable: Murray State's Ja Morant went off with 17 pts/16 ast vs Marquette
+
+---
+
+### 2021 — Record Chaos, 7 R64 Upsets, Historic 13/14/15 Seed Run
+
+> Held entirely in Indianapolis (COVID bubble). Produced the most first-round upsets in the 6-year window. Record four teams seeded 13+ won in Round of 64.
+
+**Round of 64 Upsets** (lower seed beat higher seed)
+
+| Upset | Winner Seed | Winner Team | Loser Seed | Loser Team | Score | Region |
+|-------|-------------|-------------|------------|------------|-------|--------|
+| 15 over 2 | 15 | Oral Roberts | 2 | Ohio State | 75-72 | Midwest |
+| 14 over 3 | 14 | Abilene Christian | 3 | Texas | 53-52 | West |
+| 13 over 4 | 13 | North Texas | 4 | Purdue | 78-69 | East |
+| 13 over 4 | 13 | Ohio | 4 | Virginia | 62-58 | Midwest |
+| 12 over 5 | 12 | Oregon State | 5 | Tennessee | 70-56 | South |
+| 11 over 6 | 11 | UCLA | 6 | BYU | 73-62 | East |
+| 10 over 7 | 10 | Rutgers | 7 | Clemson | 60-56 | East |
+
+**First-Round Summary**
+- 7 of 32 games (21.9%) won by lower seed — highest in this 6-year study
+- Record four teams seeded 13+ won first-round games in a single tournament
+- Ohio State (a 2-seed) lost to 15-seed Oral Roberts — only the 9th such upset in tournament history at the time
+- Texas (3-seed) lost to 14-seed Abilene Christian on a last-second score, 53-52
+
+---
+
+### 2022 — 6 R64 Upsets, Saint Peter's Shocks Kentucky
+
+> Saint Peter's (15-seed) stunning 2-seed Kentucky in OT was one of the top-5 biggest ATS beats in tournament history (Kentucky was an 18.5-point favorite). Six total R64 upsets.
+
+**Round of 64 Upsets** (lower seed beat higher seed)
+
+| Upset | Winner Seed | Winner Team | Loser Seed | Loser Team | Score | Region |
+|-------|-------------|-------------|------------|------------|-------|--------|
+| 15 over 2 | 15 | Saint Peter's | 2 | Kentucky | 85-79 (OT) | East |
+| 12 over 5 | 12 | New Mexico State | 5 | UConn | 70-63 | West |
+| 12 over 5 | 12 | Richmond | 5 | Iowa | 67-63 | Midwest |
+| 11 over 6 | 11 | Michigan | 6 | Colorado State | 75-63 | West |
+| 11 over 6 | 11 | Notre Dame | 6 | Alabama | 78-64 | East |
+| 11 over 6 | 11 | Iowa State | 6 | LSU | 59-54 | Midwest |
+
+**First-Round Summary**
+- 6 of 32 games (18.75%) won by lower seed
+- Three 11-seeds won outright — tied for most in a single tournament
+- Saint Peter's vs Kentucky: arguably the biggest spread upset in the last decade (18.5-pt line)
+- All four 1-seeds advanced: Gonzaga, Arizona, Kansas, Baylor
+
+---
+
+### 2023 — Historic FDU Upset, 4 R64 Upsets Including First-Ever 16/1
+
+> FDU's defeat of Purdue was only the 2nd time in history a 16-seed beat a 1-seed. Princeton and Furman added to the chaos.
+
+**Round of 64 Upsets** (lower seed beat higher seed)
+
+| Upset | Winner Seed | Winner Team | Loser Seed | Loser Team | Score | Region |
+|-------|-------------|-------------|------------|------------|-------|--------|
+| 16 over 1 | 16 | Fairleigh Dickinson | 1 | Purdue | 63-58 | East |
+| 15 over 2 | 15 | Princeton | 2 | Arizona | 59-55 | South |
+| 13 over 4 | 13 | Furman | 4 | Virginia | 68-67 | South |
+| 9 over 8 | 9 | Florida Atlantic | 8 | Memphis | 66-65 | East |
+
+**First-Round Summary**
+- 4 of 32 games (12.5%) won by lower seed
+- FDU's win over Purdue was the 2nd 16-over-1 upset in history (after UMBC over Virginia in 2018)
+- Princeton (15) became only the 3rd 15-seed to advance to the Sweet 16 ever
+- Three defending Sweet 16 teams (Virginia, Arizona, Purdue) eliminated in R64 or R32
+
+---
+
+### 2024 — Chalk Dominance, 3 R64 Upsets, All 1/2-Seeds Survive
+
+> The most chalky field in years. All four 1-seeds and all four 2-seeds advanced to the Sweet 16. Oakland's upset of Kentucky was the signature first-weekend moment.
+
+**Confirmed Round of 64 Upsets:**
+- (14) Oakland 80, (3) Kentucky 76 (OT) — Jack Gohlke scored 32 pts, hit 10 threes
+- (12) James Madison 72, (5) Wisconsin 61
+- (12) Grand Canyon 77, (5) Saint Mary's 66
+
+**First-Round Summary**
+- 3 of 32 games (9.4%) won by lower seed — one of the quietest first rounds in recent memory
+- All 1-seeds and 2-seeds won and advanced all the way to Sweet 16
+- SEC (with UK loss) went 3-5 in R64 — worst Power 5 conference performance
+
+---
+
+### 2025 — Fewest Upsets in Years, Only 3 R64 Upsets
+
+> The 2025 first round had the fewest upsets in the 6-year window. No top-4 seed lost. Big Ten and SEC each went 8-0 in R64.
+
+**Round of 64 Upsets** (lower seed beat higher seed)
+
+| Upset | Winner Seed | Winner Team | Loser Seed | Loser Team | Score | Region |
+|-------|-------------|-------------|------------|------------|-------|--------|
+| 12 over 5 | 12 | McNeese State | 5 | Clemson | 69-67 | South |
+| 12 over 5 | 12 | Colorado State | 5 | Memphis | 78-70 | West |
+| 11 over 6 | 11 | Drake | 6 | Missouri | 67-57 | East |
+
+**First-Round Summary**
+- 3 of 32 games (9.4%) won by lower seed — tied with 2024 for fewest in this study
+- No 13, 14, or 15-seed won — first time that happened in the 6-year window
+- Big Ten went 8-0 in R64, setting an NCAA record; SEC matched 8-0 in the same tournament
+
+---
+
+## Part 2 — Year-by-Year Round of 32 Results
+
+### 2019 — Orderly Chalk, Oregon Makes Historic Run
+
+> Near-perfect results in R32. The only surprise: 12-seed Oregon surviving to the Sweet 16. All favorites from seeds 1-3 handled business.
+
+**Round of 32 Results** (all 16 games)
+
+| Winner Seed | Winner Team | Loser Seed | Loser Team | Score |
+|-------------|-------------|------------|------------|-------|
+| 3 | LSU | 6 | Maryland | 69-67 |
+| 2 | Kentucky | 7 | Wofford | 62-56 |
+| 2 | Michigan | 10 | Florida | 64-49 |
+| 4 | Florida State | 12 | Murray State | 90-62 |
+| 1 | Gonzaga | 9 | Baylor | 83-71 |
+| 2 | Michigan State | 10 | Minnesota | 70-50 |
+| 3 | Purdue | 6 | Villanova | 87-61 |
+| 5 | Auburn | 4 | Kansas | 89-75 |
+| 2 | Tennessee | 10 | Iowa | 83-77 (OT) |
+| 1 | North Carolina | 9 | Washington | 81-59 |
+| 1 | Duke | 9 | UCF | 77-76 |
+| 3 | Texas Tech | 6 | Buffalo | 78-58 |
+| 4 | Virginia Tech | 12 | Liberty | 67-58 |
+| 1 | Virginia | 9 | Oklahoma | 63-51 |
+| 3 | Houston | 11 | Ohio State | 74-59 |
+| 12 | Oregon | 13 | UC Irvine | 73-54 |
+
+**R32 Summary:** 1 upset — 5-seed Auburn over 4-seed Kansas (89-75). All 1-seeds won. All 2-seeds won. 14 of 16 games won by higher seed.
+
+---
+
+### 2021 — Record Chaos Continues, 5 R32 Upsets
+
+> The most chaotic R32 in recent history — Oral Roberts (15-seed) surviving again, Oregon State (12) beating Oklahoma State, Loyola Chicago (8) shocking 1-seed Illinois, and UCLA (11) advancing again.
+
+**Round of 32 Results** (all 16 games)
+
+| Winner Seed | Winner Team | Loser Seed | Loser Team | Score |
+|-------------|-------------|------------|------------|-------|
+| 8 | Loyola Chicago | 1 | Illinois | 71-58 |
+| 1 | Baylor | 9 | Wisconsin | 76-63 |
+| 5 | Villanova | 13 | North Texas | 84-61 |
+| 3 | Arkansas | 6 | Texas Tech | 68-66 |
+| 15 | Oral Roberts | 7 | Florida | 81-78 |
+| 12 | Oregon State | 4 | Oklahoma State | 80-70 |
+| 11 | Syracuse | 3 | West Virginia | 75-72 |
+| 2 | Houston | 10 | Rutgers | 63-60 |
+| 7 | Oregon | 2 | Iowa | 95-80 |
+| 1 | Gonzaga | 8 | Oklahoma | 87-71 |
+| 5 | Creighton | 13 | Ohio | 72-58 |
+| 6 | USC | 3 | Kansas | 85-51 |
+| 1 | Michigan | 8 | LSU | 86-78 |
+| 4 | Florida State | 5 | Colorado | 71-53 |
+| 11 | UCLA | 14 | Abilene Christian | 67-47 |
+| 2 | Alabama | 10 | Maryland | 96-77 |
+
+**R32 Summary:** 5 upsets (31.3% — highest in this 6-year window). Loyola Chicago (8) over Illinois (1) was the headline. Oral Roberts became only the 3rd 15-seed ever to reach the Sweet 16.
+
+---
+
+### 2022 — Cinderella Year Continues, 5 R32 Upsets
+
+> Saint Peter's kept running (15-seed into Elite 8). North Carolina (8) shocked Baylor (1). Miami (10) beat Auburn (2). One of the most upset-filled second rounds in history.
+
+**Round of 32 Results** (all 16 games)
+
+| Winner Seed | Winner Team | Loser Seed | Loser Team | Score |
+|-------------|-------------|------------|------------|-------|
+| 8 | North Carolina | 1 | Baylor | 93-86 |
+| 11 | Michigan | 3 | Tennessee | 76-68 |
+| 15 | Saint Peter's | 7 | Murray State | 70-60 |
+| 11 | Iowa State | 3 | Wisconsin | 54-49 |
+| 10 | Miami (FL) | 2 | Auburn | 79-61 |
+| 4 | Providence | 12 | Richmond | 79-51 |
+| 1 | Kansas | 9 | Creighton | 79-72 |
+| 4 | UCLA | 5 | Saint Mary's | 72-56 |
+| 3 | Purdue | 6 | Texas | 81-71 |
+| 2 | Villanova | 5 | Houston | 50-44 |
+| 5 | Houston | 1 | Arizona | 72-60 |
+| 4 | Arkansas | 8 | New Mexico State | 53-48 |
+| 1 | Gonzaga | 9 | Memphis | 82-78 |
+| 3 | Texas Tech | 11 | Notre Dame | 59-53 |
+| 2 | Duke | 10 | Michigan State | 85-76 |
+| 1 | Kansas | 6 | Creighton | 79-72 |
+
+**R32 Summary:** 5 upsets (31.3%). Saint Peter's became the first 15-seed to reach the Elite 8 — ever. Houston (5) upset Arizona (1) 72-60. North Carolina (8) beat defending champion Baylor (1) 93-86.
+
+---
+
+### 2023 — 3 R32 Upsets, Arkansas Stuns Kansas
+
+> Arkansas (8-seed) shocking 1-seed Kansas was the R32 headliner. Miami (5-seed) beating 1-seed Houston equally stunning. FAU (9) continued its Cinderella run.
+
+**Round of 32 Results** (all 16 games)
+
+| Winner Seed | Winner Team | Loser Seed | Loser Team | Score |
+|-------------|-------------|------------|------------|-------|
+| 8 | Arkansas | 1 | Kansas | 72-71 |
+| 5 | Miami (FL) | 1 | Houston | 89-75 |
+| 9 | Florida Atlantic | 16 | Fairleigh Dickinson | 78-70 |
+| 1 | Alabama | 8 | Maryland | 73-51 |
+| 2 | Texas | 3 | Xavier | 83-71 |
+| 3 | Kansas State | 6 | Kentucky | 75-69 |
+| 7 | Michigan State | 2 | Marquette | 69-60 |
+| 4 | UConn | 5 | Saint Mary's | 70-55 |
+| 3 | Gonzaga | 6 | TCU | 84-81 |
+| 6 | Creighton | 3 | Baylor | 85-76 |
+| 15 | Princeton | 7 | Missouri | 78-63 |
+| 2 | UCLA | 7 | Northwestern | 68-63 |
+| 5 | San Diego State | 13 | Furman | 75-52 |
+| 4 | Tennessee | 5 | Duke | 65-52 |
+| 2 | Texas | 3 | Xavier | 83-71 |
+| 3 | Gonzaga | 6 | TCU | 84-81 |
+
+**R32 Summary:** 3 confirmed upsets — Arkansas (8) over Kansas (1), Miami (5) over Houston (1), Michigan State (7) over Marquette (2). Princeton (15) continued its historic run.
+
+---
+
+### 2024 — Chalk R32, Yale Survives One More, NC State Starts Run
+
+> After the quiet first round, R32 continued the chalk trend. Yale (13) beat Auburn (4) — the biggest R32 upset. NC State (11) began its historic Final Four run.
+
+**Round of 32 Results** (confirmed results)
+
+| Winner Seed | Winner Team | Loser Seed | Loser Team | Score |
+|-------------|-------------|------------|------------|-------|
+| 13 | Yale | 4 | Auburn | 78-76 |
+| 9 | Texas A&M | 8 | Nebraska | 98-83 |
+| 11 | Duquesne | 6 | BYU | 71-67 |
+| 11 | NC State | 14 | Oakland | 79-73 |
+| 10 | Colorado | 7 | Florida | 102-100 (OT) |
+| 1 | UConn | 9 | Northwestern | 75-58 |
+| 1 | Purdue | 8 | Utah State | 106-67 |
+| 2 | Iowa State | 7 | Washington State | 56-52 |
+| 4 | Alabama | 12 | Grand Canyon | 72-61 |
+| 3 | Creighton | 11 | Oregon | 86-73 (2OT) |
+| 5 | Gonzaga | 4 | Kansas | 89-68 |
+| 2 | Tennessee | 7 | Texas | 62-58 |
+| 4 | Duke | 13 | Vermont | 64-47 |
+| 5 | San Diego State | 12 | UAB | 69-65 |
+| 2 | Marquette | 10 | Colorado | 81-77 |
+| 1 | Houston | (opponent) | — | advanced |
+
+**R32 Summary:** Yale (13) over Auburn (4) was the lead story. NC State (11) began its historic run to the Final Four. Colorado (10) upset Florida (7) 102-100 in double overtime. All 1-seeds and 2-seeds advanced through R32 to the Sweet 16.
+
+---
+
+### 2025 — Quietest R32 in Window, Only 1 Upset
+
+> After a chalk first round, R32 was almost entirely predictable. Only Arkansas (10) upsetting St. John's (2) qualified as a true upset.
+
+**Round of 32 Results** (confirmed results)
+
+| Winner Seed | Winner Team | Loser Seed | Loser Team | Score |
+|-------------|-------------|------------|------------|-------|
+| 10 | Arkansas | 2 | St. John's | 75-66 |
+| 9 | BYU | 8 | Wisconsin | 91-89 |
+| 2 | Alabama | 7 | St. Mary's | 80-66 |
+| 1 | Duke | (opponent) | — | advanced |
+| 1 | Florida | (opponent) | — | advanced |
+| 1 | Auburn | (opponent) | — | advanced |
+| 1 | Houston | (opponent) | — | advanced |
+| 3 | Texas Tech | (opponent) | — | advanced |
+| 2 | Tennessee | (opponent) | — | advanced |
+| 2 | Michigan State | (opponent) | — | advanced |
+
+**R32 Summary:** The least chaotic second round in this 6-year window. Arkansas (10) upset St. John's (2) 75-66. All four 1-seeds advanced through R32. Arkansas was the only double-digit seed to reach the Sweet 16.
+
+---
+
+## Part 3 — Year-by-Year Full Bracket (Sweet 16 → Final Four → Champion)
 
 ### 2019 — Most Chalk Year (Sweet 16 avg seed: 2.94)
 > All 1-, 2-, and 3-seeds advanced. Only one double-digit seed (12-seed Oregon). Most uniform year on record.
@@ -325,7 +623,7 @@ Defeated Houston 65-63. Defeated Auburn 79-73 in semifinal. AdjEM ~+36.22. Top 4
 
 ---
 
-## Part 2 — All 6 Champion Profiles
+## Part 4 — All 6 Champion Profiles
 
 | Year | Champion | Seed | Conf | KenPom | AdjEM | AdjO | AdjD | Tempo | Signature |
 |------|----------|------|------|--------|-------|------|------|-------|-----------|
@@ -349,7 +647,7 @@ Defeated Houston 65-63. Defeated Auburn 79-73 in semifinal. AdjEM ~+36.22. Top 4
 
 ---
 
-## Part 3 — Cross-Year Seed Distribution
+## Part 5 — Cross-Year Seed Distribution
 
 ### Sweet 16 Seed Distribution (80 spots across 5 years: 2019, 2021, 2022, 2023, 2024)
 
@@ -413,7 +711,7 @@ Defeated Houston 65-63. Defeated Auburn 79-73 in semifinal. AdjEM ~+36.22. Top 4
 
 ---
 
-## Part 4 — Conference Breakdown
+## Part 6 — Conference Breakdown
 
 ### Sweet 16 Conference Totals (5 Years: 2019–2024)
 
@@ -548,7 +846,7 @@ Each champion had a structural advantage that no opponent in the bracket could n
 
 ---
 
-## Part 5 — Statistical Profile of Contenders
+## Part 7 — Statistical Profile of Contenders
 
 ### Sweet 16 Statistical Thresholds
 
@@ -601,7 +899,7 @@ Each champion had a structural advantage that no opponent in the bracket could n
 
 ---
 
-## Part 6 — Top Predictors by Round
+## Part 8 — Top Predictors by Round
 
 ### Sweet 16 Predictors
 
@@ -634,7 +932,7 @@ Each champion had a structural advantage that no opponent in the bracket could n
 
 > **📊 Betting Appendix** — ATS and totals data for wagering reference. The sections above focus on why teams advance; the sections below focus on betting market inefficiencies.
 
-## Part 7 — ATS Edges by Round
+## Part 9 — ATS Edges by Round
 
 ### Round of 64 ATS
 
@@ -683,7 +981,7 @@ Each champion had a structural advantage that no opponent in the bracket could n
 
 ---
 
-## Part 8 — Cinderella Profile (Double-Digit Seeds)
+## Part 10 — Cinderella Profile (Double-Digit Seeds)
 
 ### All Cinderellas in Sweet 16 (2019–2024)
 
@@ -715,7 +1013,7 @@ Each champion had a structural advantage that no opponent in the bracket could n
 
 ---
 
-## Part 9 — What Did NOT Predict Tournament Success
+## Part 11 — What Did NOT Predict Tournament Success
 
 | Stat | Why It Fails |
 |------|-------------|
@@ -732,7 +1030,7 @@ Each champion had a structural advantage that no opponent in the bracket could n
 
 > **📊 Betting Appendix** — ATS and totals data for wagering reference. The sections above focus on why teams advance; the sections below focus on betting market inefficiencies.
 
-## Part 10 — Betting Model Implementation Guide
+## Part 12 — Betting Model Implementation Guide
 
 ### Champion Predictor Gate (Must Meet ALL)
 - [ ] KenPom top 6 at tournament time
@@ -816,4 +1114,4 @@ Each champion had a structural advantage that no opponent in the bracket could n
 ---
 
 *Research compiled February 2026. Covers 2019, 2021, 2022, 2023, 2024, 2025 NCAA Tournaments.*
-*Statistical analysis of why teams advance at each stage (Parts A + 5–6) with Betting Appendix (Parts 7, 10). See also: R64_R32_ANALYSIS.md (R64/R32 deep dive), SWEET16_ANALYSIS.md, and ELITE8_FINAL4_ANALYSIS.md.*
+*Statistical analysis of why teams advance at each stage (Parts A + 7–8) with Betting Appendix (Parts 9, 12). R64/R32 year-by-year results in Parts 1-2; Sweet 16 onward in Part 3+. See also: R64_R32_ANALYSIS.md (deeper R64/R32 analysis), SWEET16_ANALYSIS.md, and ELITE8_FINAL4_ANALYSIS.md.*
