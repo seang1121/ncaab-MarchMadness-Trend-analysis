@@ -1,5 +1,8 @@
 # NCAAB March Madness — Full Tournament Analysis (2019–2025)
 
+![GitHub tag](https://img.shields.io/github/v/tag/seang1121/ncaab-MarchMadness-Trend-analysis)
+![License](https://img.shields.io/github/license/seang1121/ncaab-MarchMadness-Trend-analysis)
+
 6 years of NCAA Tournament data (2019, 2021, 2022, 2023, 2024, 2025) broken down round by round. The goal is simple: understand *why* teams actually win and advance, not just that they did. Every upset, every Cinderella run, every chalk result has a statistical explanation hiding in the pre-tournament data. This repo finds it.
 
 *(2020 was cancelled due to COVID-19)*
