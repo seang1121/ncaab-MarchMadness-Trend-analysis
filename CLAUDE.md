@@ -1,71 +1,139 @@
 # CLAUDE.md
 
-## Project Overview
+## What This Repo Is
 
-NCAA Basketball March Madness Trend Analysis (2019–2025). A documentation-only research project analyzing why teams win and advance in the NCAA tournament, based on KenPom efficiency metrics across 6 tournament years (2019, 2021–2025; 2020 cancelled due to COVID).
+A 6-year study (2019, 2021–2025) of why teams win and advance in the NCAA Tournament, built on KenPom efficiency metrics. No source code — just Markdown analysis and a GitHub Pages landing page.
 
-This repository contains **no source code** — it is entirely Markdown analysis documents and a GitHub Pages HTML landing page.
+Use this file as a quick-reference playbook when filling out a bracket or evaluating matchups. The detailed analysis lives in the files listed below.
 
-## Repository Structure
+---
 
-```
-├── README.md                          # Landing page, stats glossary, key findings summary
-├── COMPLETE_MARCH_MADNESS_ANALYSIS.md # Full combined analysis across all rounds
-├── R64_R32_ANALYSIS.md                # Round of 64 & Round of 32 deep dive
-├── SWEET16_ANALYSIS.md                # Sweet 16 analysis
-├── ELITE8_FINAL4_ANALYSIS.md          # Elite 8, Final Four & champion profiles
-├── index.html                         # GitHub Pages landing page (dark theme)
-└── .gitignore                         # Ignores Python, data files, IDE configs
-```
+## How to Use This for Your Bracket
 
-## Key Conventions
+### Step 1 — Identify Your Champion (Start Here)
 
-### Writing Style
-- Use em-dashes (—) for emphasis and description separation, not colons
-- All claims must be backed by specific efficiency statistics and year references
-- Explain KenPom metrics in plain English when first introduced
-- Prioritize clarity over brevity — every metric gets a plain-English explanation
+Every champion from 2019–2025 passed **all** of these gates. If a team fails any one, fade them for the title:
 
-### Document Structure (each analysis file follows this pattern)
-1. Header with year range
-2. Quick Reference — top findings in table format
-3. Betting Reference — ATS data tables
-4. Year-by-Year Results — detailed breakdown per tournament year
-5. Analytical Sections — efficiency cliffs, dead zones, trends
-6. Betting Appendix — ATS records, historical trends
+| Gate | Threshold | Why It Matters |
+|------|-----------|----------------|
+| KenPom Rank | Top 6 | No champion has ever come from outside this range |
+| AdjEM | +25 or higher | The efficiency floor — most champions were +29+ |
+| AdjO Rank | Top 25 | Elite offense is non-negotiable |
+| AdjD Rank | Top 25 | Elite defense is non-negotiable |
+| SOS | Top 33 | Must be schedule-tested against real competition |
+| Seed | 1–4 | Average champion seed is 1.5 |
+| Conference | Power conference | All 6 champions came from ACC, Big 12, Big East, or SEC |
+| FT attempt rate | Top 25 | Getting to the line absorbs variance in close games |
 
-### Markdown Formatting
-- `#` for document titles, `##` for major sections, `###` for year-specific headers
-- Tables for all statistical comparisons and tournament results
-- Blockquotes (`>`) for contextual descriptions
-- Bold for metric names and key findings
-- Consistent year headers: e.g., `### 2024 — [Theme]`
+**Action:** Pull up KenPom rankings. Filter to teams meeting all gates. Those are your realistic title contenders — usually 3–5 teams.
 
-### Data & Metrics
-- **Primary metrics:** KenPom Rank, AdjEM, AdjO, AdjD, Tempo, SOS, ATS records
-- **Tournament scope:** 2019, 2021–2025 (6 years; 2020 omitted)
-- Separate betting/ATS data into clearly labeled appendix sections
-- Use seed and efficiency terminology consistently across files
+### Step 2 — Apply the Efficiency Staircase (Round by Round)
 
-### Key Concepts
-- **AdjEM (Adjusted Efficiency Margin):** Points per 100 possessions vs. average D1 team — the most predictive metric
-- **Efficiency Staircase:** Distinct AdjEM floors per tournament stage (+14 R32, +22 Sweet 16, etc.)
-- **Dead Zone:** Seeds 6–9 produce only ~7.5% of Sweet 16 spots
-- **Extreme Teams:** Top-10 in one efficiency metric but outside top-50 in the other — 0 championships in 22 years
-- **Champion Gate:** All 6 champions met: KenPom top 6, AdjEM +25+, AdjO top 25, AdjD top 25
+Each round has a distinct efficiency floor. Use this to decide who advances:
 
-## Commit Conventions
+| Round | AdjEM Floor | Defense Requirement | What to Look For |
+|-------|-------------|--------------------|--------------------|
+| R64 winner | +8 to +10 | Any | Check for KenPom inversions — if the lower seed ranks higher on KenPom, pick the upset (60%+ win rate) |
+| R32 winner | +14 to +16 | AdjD top 55 | Cinderellas from R64 almost always lose here (0-10 ATS since 1998) |
+| Sweet 16 | +22 to +24 | **AdjD top 40** | This is the steepest cliff — the +14 to +22 gap eliminates most mid-tier teams |
+| Elite 8 | +20+ | AdjD top 30 | One-dimensional teams get exposed — need both AdjO and AdjD top 30 |
+| Final Four | +25+ | AdjD top 25 | Must be matchup-proof on both ends |
+| Champion | +26 to +36 | AdjD top 25 | See champion gate above |
 
-- Use conventional commit prefixes: `feat:`, `docs:`, `chore:`
-- Em-dashes (—) in commit descriptions for readability
-- Focus commit messages on analytical improvements, data additions, or structural changes
+### Step 3 — Flag Upsets Using Red Flags and Green Flags
 
-## GitHub Pages
+**Red flags (pick the upset):**
+- Favorite's AdjD is weak for their seed (e.g., a 2-seed with AdjD outside top 40)
+- KenPom inversion — the lower seed actually ranks higher on KenPom
+- "Extreme Team" — top-10 in AdjO or AdjD but outside top-50 in the other (0 championships in 22 years)
+- Seeds 6–9 in R32 — bracket position makes this a dead zone (only 7.5% of Sweet 16 spots)
 
-- Landing page: `index.html` with custom dark theme
-- CSS variables: primary `#0d1117`, blue accent `#1a3c6e`, orange accent `#e87722`
-- Card-based navigation linking to analysis Markdown files
+**Green flags (trust the underdog):**
+- 11-seed vs 6-seed — 63.5% ATS since 2009; most 11s are power conference mis-seeds with KenPom 25–40
+- Defense-first Cinderella — AdjD top 30, slow tempo (<70 possessions), won conference tournament
+- First Four winner in R64 — 92.1% ATS since 2013
+- 10/11-seeds that won R64 entering R32 — 13-5 ATS since 2016
 
-## No Build or Test Steps
+### Step 4 — Fill Out the Late Rounds
 
-This is a pure documentation project. There are no dependencies, build steps, linters, or test suites to run.
+**Sweet 16 and beyond:**
+- Fade 5+ point Sweet 16 favorites (31.8% ATS) — the market overprices them
+- Back 4–6 point Sweet 16 underdogs (56.7% ATS since 1990)
+- At the Elite 8, lean underdogs overall (57% ATS all-time)
+- 5-seeds in the Elite 8: 8-1 ATS since 1985 (best historical edge)
+- Fade 1-seeds in the Elite 8 (43.4% ATS) — overpriced by the market
+
+**Final Four and Championship:**
+- Pick the Final Four winner to cover in the championship — 83% ATS (35-7-2 since 2001)
+- ACC teams in the Final Four: 10-6 ATS since 2001
+
+---
+
+## Key Concepts (Quick Glossary)
+
+| Metric | What It Means |
+|--------|---------------|
+| **AdjEM** | Points per 100 possessions vs. average D1 team — the single most predictive stat |
+| **AdjO / AdjD** | Offensive / defensive efficiency rank (lower = better) |
+| **Tempo** | Possessions per game — slow tempo (<70) compresses games and helps underdogs |
+| **SOS** | Strength of schedule — how tough the opponents were |
+| **ATS** | Against the spread — did they cover the betting line? |
+| **KenPom Rank** | Overall efficiency ranking combining offense and defense |
+
+---
+
+## Cinderella Profile (When to Trust a Low Seed)
+
+All deep-run Cinderellas shared these traits:
+1. AdjD inside top 30 nationally (defense-first identity)
+2. Slow tempo — below 70 possessions/game
+3. One dominant scorer the opponent must game-plan for
+4. Won their conference tournament (proven in elimination games)
+5. KenPom top 50 (they were mis-seeded, not overmatched)
+6. Upperclassman-heavy roster
+
+**Ceiling by type:**
+- Defense-first (great AdjD, weak AdjO) — maxes out at Elite 8
+- Balanced (both sides top 60) — can reach the Final Four
+- Offense-only (great AdjO, weak AdjD) — maxes out in R32
+
+---
+
+## What Does NOT Predict Advancement
+
+Don't use these when filling out your bracket:
+- **Regular season win total** — schedule quality matters more than raw wins
+- **3-point shooting %** — too volatile, regresses to the mean in small samples
+- **Blue Blood brand** — Kansas, Kentucky, Duke, UNC all exited before the Sweet 16 in 2023
+- **Margin of victory** — feasting on weak opponents doesn't prepare teams for March
+- **Coach name recognition** — elite coaches lose in R64 every year
+
+---
+
+## Repo Files — Where to Go Deeper
+
+| File | Use It When You Need... |
+|------|------------------------|
+| `README.md` | Quick reference, stats glossary, key findings at a glance |
+| `COMPLETE_MARCH_MADNESS_ANALYSIS.md` | Everything in one document — all rounds, all years, all data |
+| `R64_R32_ANALYSIS.md` | First-weekend upset picks, Cinderella case studies, R64/R32 betting angles |
+| `SWEET16_ANALYSIS.md` | The efficiency cliff, dead zone analysis, which mid-seeds actually advance |
+| `ELITE8_FINAL4_ANALYSIS.md` | Late-round profiles, champion breakdowns, what separates good from great |
+| `index.html` | GitHub Pages landing page (dark theme, card navigation) |
+
+---
+
+## Writing & Contribution Conventions
+
+When updating or adding analysis to this repo:
+- Use em-dashes (—) for emphasis, not colons
+- Back every claim with specific efficiency stats and year references
+- Follow the document pattern: Quick Reference → Year-by-Year → Analysis → Betting Appendix
+- Use tables for all statistical comparisons
+- Keep betting/ATS data in clearly labeled appendix sections
+- Explain metrics in plain English when first introduced
+- Commit messages: use `feat:`, `docs:`, `chore:` prefixes (conventional commits)
+
+**GitHub Pages styling:** dark theme with primary `#0d1117`, blue `#1a3c6e`, orange accent `#e87722`
+
+No build steps, no dependencies, no tests — pure documentation project.
