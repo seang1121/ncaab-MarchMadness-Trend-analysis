@@ -37,6 +37,9 @@ Before diving in, here's what each metric actually means in plain English. These
 | [R64_R32_ANALYSIS.md](./R64_R32_ANALYSIS.md) | Deep dive on the first two rounds — why teams win, Cinderella case studies (with the specific in-game stats that drove each upset), warning signs for vulnerable favorites, full betting appendix | 2019–2025 |
 | [ELITE8_FINAL4_ANALYSIS.md](./ELITE8_FINAL4_ANALYSIS.md) | Elite 8 and Final Four deep dive — what separates Sweet 16 teams from Final Four teams, why champions win, betting appendix | 2019–2025 |
 | [SWEET16_ANALYSIS.md](./SWEET16_ANALYSIS.md) | Sweet 16 deep dive — the efficiency cliff from R32 to Sweet 16, why certain seeds almost never advance, Cinderella profiles, betting appendix | 2019–2024 |
+| [TOURNAMENT_PREVIEW_TEMPLATE.md](./TOURNAMENT_PREVIEW_TEMPLATE.md) | Selection Sunday bracket worksheet — step-by-step checklist to fill out your bracket using efficiency data | Annual |
+| [LATE_SEASON_FORM_ANALYSIS.md](./LATE_SEASON_FORM_ANALYSIS.md) | Late-season trajectory, conference tournament results, injury context — what KenPom doesn't capture | 2019–2025 |
+| [MATCHUP_ARCHETYPES_ANALYSIS.md](./MATCHUP_ARCHETYPES_ANALYSIS.md) | Style clashes — Juggernaut vs. Fortress vs. Engine, tempo as a weapon, Four Factors by round, bench depth | 2019–2025 |
 
 **Start with `COMPLETE_MARCH_MADNESS_ANALYSIS.md`** if you want everything in one place. Use the individual files when you want round-specific depth. Every file follows the same structure: the analytical "why teams win" content comes first, the ATS/betting data is in clearly labeled appendix sections at the end.
 

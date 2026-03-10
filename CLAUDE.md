@@ -119,6 +119,9 @@ Don't use these when filling out your bracket:
 | `R64_R32_ANALYSIS.md` | First-weekend upset picks, Cinderella case studies, R64/R32 betting angles |
 | `SWEET16_ANALYSIS.md` | The efficiency cliff, dead zone analysis, which mid-seeds actually advance |
 | `ELITE8_FINAL4_ANALYSIS.md` | Late-round profiles, champion breakdowns, what separates good from great |
+| `TOURNAMENT_PREVIEW_TEMPLATE.md` | Selection Sunday — fill-in-the-blank bracket worksheet using all the research |
+| `LATE_SEASON_FORM_ANALYSIS.md` | Evaluating trajectory, conference tournament results, injuries, late-season momentum |
+| `MATCHUP_ARCHETYPES_ANALYSIS.md` | Style clashes — how tempo, defense, offense, and depth interact head-to-head |
 | `index.html` | GitHub Pages landing page (dark theme, card navigation) |
 
 ---
