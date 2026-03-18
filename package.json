@@ -1,0 +1,25 @@
+{
+  "name": "march-madness-analyzer",
+  "version": "1.0.0",
+  "description": "March Madness bracket analyzer and generator powered by 14 years of KenPom efficiency research (2011-2025)",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/cli.ts",
+    "test": "vitest run",
+    "fetch": "tsx src/cli.ts fetch-data",
+    "generate": "tsx src/cli.ts generate",
+    "analyze": "tsx src/cli.ts analyze",
+    "gate": "tsx src/cli.ts champion-gate",
+    "recalibrate": "tsx src/cli.ts recalibrate"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "commander": "^12.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.3.0"
+  }
+}

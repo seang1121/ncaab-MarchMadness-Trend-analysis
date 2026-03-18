@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+data/*.json
+!data/historical/
