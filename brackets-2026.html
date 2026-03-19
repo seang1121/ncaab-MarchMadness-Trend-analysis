@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>March Madness 2026 — Pick Sheets</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0c0e12;--card:#14171e;--border:#1e2230;--text:#e2e4ea;--dim:#6b7084;--accent:#4f8cff;--upset:#f59e0b;--upset-bg:rgba(245,158,11,0.08);--green:#22c55e;--champ-bg:linear-gradient(135deg,#1a1c2e,#1e2644);--progress-bg:#1e2230;--check:#22c55e}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-height:100vh}
+.container{max-width:900px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:1.6rem;font-weight:900;letter-spacing:-0.5px;margin-bottom:4px}
+.subtitle{color:var(--dim);font-size:0.85rem;margin-bottom:24px;font-weight:300}
+.tabs{display:flex;gap:6px;margin-bottom:20px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{padding:10px 16px;border-radius:8px;background:var(--card);border:1px solid var(--border);cursor:pointer;white-space:nowrap;font-family:'Outfit',sans-serif;font-size:0.8rem;font-weight:500;color:var(--dim);transition:all .15s}
+.tab:hover{border-color:var(--accent);color:var(--text)}
+.tab.active{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700}
+.tab .tab-upsets{font-size:0.65rem;color:var(--upset);margin-left:4px}
+.tab.active .tab-upsets{color:rgba(255,255,255,0.7)}
+.champ-banner{background:var(--champ-bg);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between}
+.champ-banner h2{font-size:1.3rem;font-weight:900;letter-spacing:-0.5px}
+.champ-banner .champ-label{font-size:0.7rem;text-transform:uppercase;letter-spacing:2px;color:var(--accent);font-weight:700;margin-bottom:2px}
+.champ-banner .strategy{font-size:0.75rem;color:var(--dim);background:rgba(255,255,255,0.04);padding:4px 10px;border-radius:6px}
+.progress-wrap{margin-bottom:20px}
+.progress-bar{height:6px;background:var(--progress-bg);border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;background:var(--accent);border-radius:3px;transition:width .3s}
+.progress-text{font-size:0.7rem;color:var(--dim);margin-top:4px;font-family:'JetBrains Mono',monospace}
+.region{margin-bottom:16px}
+.region-header{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent);padding:8px 0 6px;border-bottom:1px solid var(--border);margin-bottom:8px}
+.round-label{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--dim);margin:10px 0 4px;padding-left:2px}
+.pick-row{display:flex;align-items:center;gap:10px;padding:6px 8px;border-radius:6px;cursor:pointer;transition:background .1s;font-size:0.82rem}
+.pick-row:hover{background:rgba(255,255,255,0.03)}
+.pick-row.checked{opacity:0.45}
+.pick-row.checked .pick-winner{text-decoration:line-through}
+.pick-row.upset{background:var(--upset-bg);border-left:3px solid var(--upset)}
+.pick-row.upset .upset-tag{display:inline}
+.pick-checkbox{width:18px;height:18px;border-radius:4px;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .15s}
+.pick-row.checked .pick-checkbox{background:var(--check);border-color:var(--check)}
+.pick-row.checked .pick-checkbox::after{content:"✓";color:#fff;font-size:11px;font-weight:700}
+.matchup{color:var(--dim);font-family:'JetBrains Mono',monospace;font-size:0.72rem;min-width:280px}
+.matchup .seed{color:var(--dim)}
+.pick-winner{font-weight:700;color:var(--text);min-width:140px}
+.upset-tag{display:none;font-size:0.6rem;font-weight:700;color:var(--upset);text-transform:uppercase;letter-spacing:1px;padding:2px 6px;border-radius:3px;background:rgba(245,158,11,0.12)}
+.ff-section{margin-top:20px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 20px}
+.ff-section .region-header{color:var(--green);border-color:rgba(34,197,94,0.2)}
+.ff-section .pick-row.upset{border-left-color:var(--upset)}
+.instructions{margin-top:24px;padding:16px 20px;background:var(--card);border:1px solid var(--border);border-radius:10px;font-size:0.78rem;color:var(--dim);line-height:1.6}
+.instructions strong{color:var(--text)}
+.instructions .step{color:var(--accent);font-weight:700;margin-right:4px}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>March Madness 2026</h1>
+<p class="subtitle">6 brackets — click each pick as you fill it in on ESPN</p>
+
+<div class="tabs" id="tabs"></div>
+<div class="champ-banner" id="champBanner">
+  <div><div class="champ-label">Champion</div><h2 id="champName"></h2></div>
+  <div class="strategy" id="champStrategy"></div>
+</div>
+<div class="progress-wrap">
+  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="progress-text" id="progressText"></div>
+</div>
+<div id="bracketContent"></div>
+
+<div class="instructions">
+  <strong>How to use:</strong><br>
+  <span class="step">1.</span> Open ESPN Tournament Challenge in another tab<br>
+  <span class="step">2.</span> Select a bracket tab above<br>
+  <span class="step">3.</span> Go region by region — click each team on ESPN, then check it off here<br>
+  <span class="step">4.</span> <span style="color:var(--upset)">Orange rows</span> = upset picks. Pay attention to these!<br>
+  <span class="step">5.</span> Progress bar tracks how many picks you've filled in (63 total per bracket)
+</div>
+</div>
+
+<script>
+const BRACKETS = [
+  {
+    id: 1, name: "Arizona", strategy: "SAFE — Analytically best team, under-picked", upsets: 6, champion: "Arizona",
+    regions: {
+      East: {
+        r64: [
+          {s:[1,16],t:["Duke","Siena"],p:"Duke"},
+          {s:[8,9],t:["Ohio St.","TCU"],p:"Ohio St."},
+          {s:[5,12],t:["St. John's","Northern Iowa"],p:"St. John's"},
+          {s:[4,13],t:["Kansas","Cal Baptist"],p:"Kansas"},
+          {s:[6,11],t:["Louisville","South Florida"],p:"Louisville"},
+          {s:[3,14],t:["Michigan St.","North Dakota St."],p:"Michigan St."},
+          {s:[7,10],t:["UCLA","UCF"],p:"UCLA"},
+          {s:[2,15],t:["Connecticut","Furman"],p:"Connecticut"}
+        ],
+        r32: [{t:["Duke","Ohio St."],p:"Duke"},{t:["St. John's","Kansas"],p:"St. John's",u:true},{t:["Louisville","Michigan St."],p:"Michigan St."},{t:["UCLA","Connecticut"],p:"Connecticut"}],
+        s16: [{t:["Duke","St. John's"],p:"Duke"},{t:["Michigan St.","Connecticut"],p:"Connecticut"}],
+        e8: [{t:["Duke","Connecticut"],p:"Duke"}]
+      },
+      West: {
+        r64: [
+          {s:[1,16],t:["Arizona","LIU"],p:"Arizona"},
+          {s:[8,9],t:["Villanova","Utah St."],p:"Utah St.",u:true},
+          {s:[5,12],t:["Wisconsin","High Point"],p:"Wisconsin"},
+          {s:[4,13],t:["Arkansas","Hawaii"],p:"Arkansas"},
+          {s:[6,11],t:["BYU","Texas"],p:"BYU"},
+          {s:[3,14],t:["Gonzaga","Kennesaw St."],p:"Gonzaga"},
+          {s:[7,10],t:["Miami FL","Missouri"],p:"Miami FL"},
+          {s:[2,15],t:["Purdue","Queens"],p:"Purdue"}
+        ],
+        r32: [{t:["Arizona","Utah St."],p:"Arizona"},{t:["Wisconsin","Arkansas"],p:"Arkansas"},{t:["BYU","Gonzaga"],p:"Gonzaga"},{t:["Miami FL","Purdue"],p:"Purdue"}],
+        s16: [{t:["Arizona","Arkansas"],p:"Arizona"},{t:["Gonzaga","Purdue"],p:"Purdue"}],
+        e8: [{t:["Arizona","Purdue"],p:"Arizona"}]
+      },
+      South: {
+        r64: [
+          {s:[1,16],t:["Florida","Prairie View A&M"],p:"Florida"},
+          {s:[8,9],t:["Clemson","Iowa"],p:"Iowa",u:true},
+          {s:[5,12],t:["Vanderbilt","McNeese"],p:"Vanderbilt"},
+          {s:[4,13],t:["Nebraska","Troy"],p:"Nebraska"},
+          {s:[6,11],t:["North Carolina","VCU"],p:"North Carolina"},
+          {s:[3,14],t:["Illinois","Penn"],p:"Illinois"},
+          {s:[7,10],t:["Saint Mary's","Texas A&M"],p:"Saint Mary's"},
+          {s:[2,15],t:["Houston","Idaho"],p:"Houston"}
+        ],
+        r32: [{t:["Florida","Iowa"],p:"Florida"},{t:["Vanderbilt","Nebraska"],p:"Vanderbilt",u:true},{t:["North Carolina","Illinois"],p:"Illinois"},{t:["Saint Mary's","Houston"],p:"Houston"}],
+        s16: [{t:["Florida","Vanderbilt"],p:"Florida"},{t:["Illinois","Houston"],p:"Houston"}],
+        e8: [{t:["Florida","Houston"],p:"Florida"}]
+      },
+      Midwest: {
+        r64: [
+          {s:[1,16],t:["Michigan","UMBC"],p:"Michigan"},
+          {s:[8,9],t:["Georgia","Saint Louis"],p:"Saint Louis",u:true},
+          {s:[5,12],t:["Texas Tech","Akron"],p:"Texas Tech"},
+          {s:[4,13],t:["Alabama","Hofstra"],p:"Alabama"},
+          {s:[6,11],t:["Tennessee","SMU"],p:"Tennessee"},
+          {s:[3,14],t:["Virginia","Wright St."],p:"Virginia"},
+          {s:[7,10],t:["Kentucky","Santa Clara"],p:"Kentucky"},
+          {s:[2,15],t:["Iowa St.","Tennessee St."],p:"Iowa St."}
+        ],
+        r32: [{t:["Michigan","Saint Louis"],p:"Michigan"},{t:["Texas Tech","Alabama"],p:"Texas Tech",u:true},{t:["Tennessee","Virginia"],p:"Virginia"},{t:["Kentucky","Iowa St."],p:"Iowa St."}],
+        s16: [{t:["Michigan","Texas Tech"],p:"Michigan"},{t:["Virginia","Iowa St."],p:"Iowa St."}],
+        e8: [{t:["Michigan","Iowa St."],p:"Michigan"}]
+      }
+    },
+    ff: {semi1:{t:["Duke","Arizona"],p:"Arizona",u:true},semi2:{t:["Florida","Michigan"],p:"Michigan"},champ:{t:["Arizona","Michigan"],p:"Arizona"}}
+  },
+  {
+    id: 2, name: "Michigan", strategy: "SAFE — Model's math-optimal pick", upsets: 6, champion: "Michigan",
+    regions: null, ff: null // same regions as bracket 1, different FF
+  },
+  {
+    id: 3, name: "Duke", strategy: "SAFE — #1 overall seed, weakened by injury", upsets: 7, champion: "Duke",
+    regions: null, ff: null
+  },
+  {
+    id: 4, name: "Michigan", strategy: "BALANCED — More S16 upsets", upsets: 10, champion: "Michigan",
+    regions: null, ff: null
+  },
+  {
+    id: 5, name: "Houston", strategy: "CONTRARIAN — Best 2-seed, runs the South", upsets: 14, champion: "Houston",
+    regions: null, ff: null
+  },
+  {
+    id: 6, name: "Illinois", strategy: "CONTRARIAN — 3-seed sleeper, #1 offense", upsets: 16, champion: "Illinois",
+    regions: null, ff: null
+  }
+];
+
+// Brackets 2,3 share same regions as 1 but different FF/champ
+// Build them from the pick sheet data
+const B1 = BRACKETS[0].regions;
+BRACKETS[1].regions = JSON.parse(JSON.stringify(B1));
+BRACKETS[1].ff = {semi1:{t:["Duke","Arizona"],p:"Arizona",u:true},semi2:{t:["Florida","Michigan"],p:"Michigan"},champ:{t:["Arizona","Michigan"],p:"Michigan"}};
+
+const B3r = JSON.parse(JSON.stringify(B1));
+B3r.South.s16[1] = {t:["Illinois","Houston"],p:"Illinois",u:true};
+B3r.South.e8[0] = {t:["Florida","Illinois"],p:"Florida"};
+BRACKETS[2].regions = B3r;
+BRACKETS[2].ff = {semi1:{t:["Duke","Arizona"],p:"Duke"},semi2:{t:["Florida","Michigan"],p:"Michigan"},champ:{t:["Duke","Michigan"],p:"Duke"}};
+
+// Bracket 4: balanced
+const B4r = JSON.parse(JSON.stringify(B1));
+B4r.West.r32[1] = {t:["Wisconsin","Arkansas"],p:"Wisconsin",u:true};
+B4r.West.s16 = [{t:["Arizona","Wisconsin"],p:"Arizona"},{t:["Gonzaga","Purdue"],p:"Gonzaga",u:true}];
+B4r.West.e8 = [{t:["Arizona","Gonzaga"],p:"Arizona"}];
+B4r.South.s16[1] = {t:["Illinois","Houston"],p:"Illinois",u:true};
+B4r.South.e8[0] = {t:["Florida","Illinois"],p:"Florida"};
+B4r.Midwest.r64[1] = {s:[8,9],t:["Georgia","Saint Louis"],p:"Saint Louis",u:true};
+B4r.Midwest.r64[6] = {s:[7,10],t:["Kentucky","Santa Clara"],p:"Kentucky"};
+BRACKETS[3].regions = B4r;
+BRACKETS[3].ff = {semi1:{t:["Duke","Arizona"],p:"Arizona",u:true},semi2:{t:["Florida","Michigan"],p:"Michigan"},champ:{t:["Arizona","Michigan"],p:"Michigan"}};
+
+// Bracket 5: Houston contrarian
+const B5r = JSON.parse(JSON.stringify(B4r));
+B5r.East.r64[1] = {s:[8,9],t:["Ohio St.","TCU"],p:"TCU",u:true};
+B5r.East.r32[0] = {t:["Duke","TCU"],p:"Duke"};
+B5r.East.s16[1] = {t:["Michigan St.","Connecticut"],p:"Michigan St.",u:true};
+B5r.East.e8[0] = {t:["Duke","Michigan St."],p:"Duke"};
+B5r.Midwest.r64[6] = {s:[7,10],t:["Kentucky","Santa Clara"],p:"Santa Clara",u:true};
+B5r.Midwest.r32[3] = {t:["Santa Clara","Iowa St."],p:"Iowa St."};
+B5r.South.s16[1] = {t:["Illinois","Houston"],p:"Houston"};
+B5r.South.e8[0] = {t:["Florida","Houston"],p:"Houston",u:true};
+BRACKETS[4].regions = B5r;
+BRACKETS[4].ff = {semi1:{t:["Duke","Arizona"],p:"Arizona",u:true},semi2:{t:["Houston","Michigan"],p:"Houston"},champ:{t:["Arizona","Houston"],p:"Houston"}};
+
+// Bracket 6: Illinois contrarian
+const B6r = JSON.parse(JSON.stringify(B5r));
+B6r.South.s16[1] = {t:["Illinois","Houston"],p:"Illinois",u:true};
+B6r.South.e8[0] = {t:["Florida","Illinois"],p:"Illinois",u:true};
+B6r.Midwest.e8[0] = {t:["Michigan","Iowa St."],p:"Iowa St.",u:true};
+BRACKETS[5].regions = B6r;
+BRACKETS[5].ff = {semi1:{t:["Duke","Arizona"],p:"Arizona",u:true},semi2:{t:["Illinois","Iowa St."],p:"Illinois"},champ:{t:["Arizona","Illinois"],p:"Illinois"}};
+
+// State
+let activeBracket = 0;
+const checked = {};
+BRACKETS.forEach((_,i) => checked[i] = new Set());
+
+// Load saved state
+try {
+  const saved = JSON.parse(localStorage.getItem('mm2026_checked') || '{}');
+  Object.entries(saved).forEach(([k,v]) => checked[k] = new Set(v));
+} catch(e) {}
+
+function saveState() {
+  const obj = {};
+  Object.entries(checked).forEach(([k,v]) => obj[k] = [...v]);
+  localStorage.setItem('mm2026_checked', JSON.stringify(obj));
+}
+
+function render() {
+  const b = BRACKETS[activeBracket];
+  // Tabs
+  document.getElementById('tabs').innerHTML = BRACKETS.map((br,i) =>
+    `<div class="tab ${i===activeBracket?'active':''}" onclick="activeBracket=${i};render()">
+      #${i+1} ${br.name}<span class="tab-upsets">${br.upsets}u</span>
+    </div>`
+  ).join('');
+
+  // Champion banner
+  document.getElementById('champName').textContent = b.champion;
+  document.getElementById('champStrategy').textContent = b.strategy;
+
+  // Progress
+  const total = 63;
+  const done = checked[activeBracket].size;
+  document.getElementById('progressFill').style.width = `${(done/total)*100}%`;
+  document.getElementById('progressText').textContent = `${done}/${total} picks filled in on ESPN`;
+
+  // Regions
+  const rounds = {r64:'Round of 64',r32:'Round of 32',s16:'Sweet 16',e8:'Elite 8'};
+  let html = '';
+  for (const [region, data] of Object.entries(b.regions)) {
+    html += `<div class="region"><div class="region-header">${region} Region</div>`;
+    for (const [round, label] of Object.entries(rounds)) {
+      const games = data[round];
+      if (!games || !games.length) continue;
+      html += `<div class="round-label">${label}</div>`;
+      games.forEach((g,gi) => {
+        const key = `${region}-${round}-${gi}`;
+        const isChecked = checked[activeBracket].has(key);
+        const isUpset = g.u;
+        const seedA = g.s ? `(${g.s[0]}) ` : '';
+        const seedB = g.s ? `(${g.s[1]}) ` : '';
+        html += `<div class="pick-row ${isChecked?'checked':''} ${isUpset?'upset':''}" onclick="toggle('${key}')">
+          <div class="pick-checkbox"></div>
+          <div class="matchup">${seedA}${g.t[0]} vs ${seedB}${g.t[1]}</div>
+          <div class="pick-winner">${g.p}</div>
+          <span class="upset-tag">UPSET</span>
+        </div>`;
+      });
+    }
+    html += '</div>';
+  }
+
+  // Final Four
+  html += `<div class="ff-section"><div class="region-header">Final Four & Championship</div>`;
+  html += `<div class="round-label">Semifinals</div>`;
+  const ff = b.ff;
+  [{g:ff.semi1,key:'ff-s1',label:'Semi 1'},{g:ff.semi2,key:'ff-s2',label:'Semi 2'}].forEach(({g,key}) => {
+    const isChecked = checked[activeBracket].has(key);
+    html += `<div class="pick-row ${isChecked?'checked':''} ${g.u?'upset':''}" onclick="toggle('${key}')">
+      <div class="pick-checkbox"></div>
+      <div class="matchup">${g.t[0]} vs ${g.t[1]}</div>
+      <div class="pick-winner">${g.p}</div>
+      <span class="upset-tag">UPSET</span>
+    </div>`;
+  });
+  html += `<div class="round-label">Championship</div>`;
+  const isChampChecked = checked[activeBracket].has('ff-champ');
+  html += `<div class="pick-row ${isChampChecked?'checked':''} ${ff.champ.u?'upset':''}" onclick="toggle('ff-champ')">
+    <div class="pick-checkbox"></div>
+    <div class="matchup">${ff.champ.t[0]} vs ${ff.champ.t[1]}</div>
+    <div class="pick-winner" style="color:var(--accent);font-size:0.95rem">${ff.champ.p}</div>
+    <span class="upset-tag">UPSET</span>
+  </div>`;
+  html += '</div>';
+
+  document.getElementById('bracketContent').innerHTML = html;
+}
+
+function toggle(key) {
+  if (checked[activeBracket].has(key)) checked[activeBracket].delete(key);
+  else checked[activeBracket].add(key);
+  saveState();
+  render();
+}
+
+render();
+</script>
+</body>
+</html>
