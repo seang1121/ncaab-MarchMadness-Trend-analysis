@@ -193,13 +193,13 @@ async function main() {
       },
     },
     {
-      label: "#4 BALANCED — Michigan (Texas A&M upset, Gonzaga S16)",
-      champion: "Michigan",
-      ffSemi1: "Arizona", ffSemi2: "Michigan",
+      label: "#4 BALANCED — Florida Champion (defending champ, Texas A&M upset)",
+      champion: "Florida",
+      ffSemi1: "Arizona", ffSemi2: "Florida",
       overrides: {
         West: { r64: { 1: "Utah St." }, r32: { 1: "Wisconsin" }, s16: { 1: "Gonzaga" } },
-        South: { r64: { 1: "Iowa", 6: "Texas A&M" }, r32: { 1: "Vanderbilt" }, s16: { 1: "Illinois" } },
-        Midwest: { r64: { 0: "TCU", 1: "Saint Louis" }, r32: { 1: "Texas Tech" } }, // TCU over Ohio St
+        South: { r64: { 1: "Iowa", 6: "Texas A&M" }, r32: { 1: "Vanderbilt" }, s16: { 1: "Illinois" }, e8: { 0: "Florida" } },
+        Midwest: { r64: { 0: "TCU", 1: "Saint Louis" }, r32: { 1: "Texas Tech" } },
         East: { r32: { 0: "St. John's" } },
       },
     },
