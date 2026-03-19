@@ -9,11 +9,16 @@ const R64_SEED_MATCHUPS: [number, number][] = [
   [1, 16], [8, 9], [5, 12], [4, 13], [6, 11], [3, 14], [7, 10], [2, 15],
 ];
 
+export interface AdvancementProbs {
+  r32: number; s16: number; e8: number; f4: number; champ: number;
+}
+
 export interface MonteCarloResult {
   numSims: number;
   champProbs: Array<{ team: string; seed: number; prob: number }>;
   ffProbs: Array<{ team: string; seed: number; prob: number }>;
   e8Probs: Array<{ team: string; seed: number; region: string; prob: number }>;
+  advancement: Map<string, AdvancementProbs>; // per-team advancement probabilities
   modeBracket: {
     regions: Record<string, { r64: string[]; r32: string[]; s16: string[]; e8: string }>;
     semi1: string;
@@ -27,15 +32,22 @@ export function monteCarloSimulate(
   ensemble: EnsembleModel,
   numSims: number = 5000,
 ): MonteCarloResult {
-  const regionTeams: Record<Region, Team[]> = { East: [], West: [], South: [], Midwest: [] };
+  // Build region map dynamically (historical tournaments may use non-standard names)
+  const regionTeams: Record<string, Team[]> = {};
   for (const t of teams) {
-    if (t.seed > 0 && t.region) regionTeams[t.region].push(t);
+    if (t.seed > 0 && t.region) {
+      if (!regionTeams[t.region]) regionTeams[t.region] = [];
+      regionTeams[t.region].push(t);
+    }
   }
+  const activeRegions = Object.keys(regionTeams) as Region[];
 
   // Track advancement counts
   const champCounts: Record<string, number> = {};
   const ffCounts: Record<string, number> = {};
   const e8Counts: Record<string, number> = {};
+  // Per-team-per-round advancement tracking
+  const advCounts: Record<string, { r32: number; s16: number; e8: number; f4: number; champ: number }> = {};
 
   // Track mode bracket (most common winner at each slot)
   const slotCounts: Record<string, Record<string, number>> = {};
@@ -53,7 +65,7 @@ export function monteCarloSimulate(
   for (let sim = 0; sim < numSims; sim++) {
     const e8Winners: Team[] = [];
 
-    for (const region of REGIONS) {
+    for (const region of activeRegions) {
       const rTeams = regionTeams[region];
       const teamBySeed: Record<number, Team> = {};
       for (const t of rTeams) teamBySeed[t.seed] = t;
@@ -76,6 +88,8 @@ export function monteCarloSimulate(
         const winner = pickRandom(r64Winners[i * 2], r64Winners[i * 2 + 1], "R32");
         r32Winners.push(winner);
         trackSlot(`${region}-R32-${i}`, winner.name);
+        if (!advCounts[winner.name]) advCounts[winner.name] = { r32: 0, s16: 0, e8: 0, f4: 0, champ: 0 };
+        advCounts[winner.name].r32++;
       }
 
       // S16
@@ -84,17 +98,22 @@ export function monteCarloSimulate(
         const winner = pickRandom(r32Winners[i * 2], r32Winners[i * 2 + 1], "S16");
         s16Winners.push(winner);
         trackSlot(`${region}-S16-${i}`, winner.name);
+        if (!advCounts[winner.name]) advCounts[winner.name] = { r32: 0, s16: 0, e8: 0, f4: 0, champ: 0 };
+        advCounts[winner.name].s16++;
       }
 
       // E8
       const e8Winner = pickRandom(s16Winners[0], s16Winners[1], "E8");
       trackSlot(`${region}-E8`, e8Winner.name);
       e8Winners.push(e8Winner);
+      if (!advCounts[e8Winner.name]) advCounts[e8Winner.name] = { r32: 0, s16: 0, e8: 0, f4: 0, champ: 0 };
+      advCounts[e8Winner.name].e8++;
 
       e8Counts[e8Winner.name] = (e8Counts[e8Winner.name] || 0) + 1;
     }
 
-    // Final Four: East vs West, South vs Midwest
+    // Final Four: region[0] vs region[1], region[2] vs region[3]
+    if (e8Winners.length < 4) continue;
     const semi1Winner = pickRandom(e8Winners[0], e8Winners[1], "F4");
     const semi2Winner = pickRandom(e8Winners[2], e8Winners[3], "F4");
     trackSlot("FF-semi1", semi1Winner.name);
@@ -102,10 +121,16 @@ export function monteCarloSimulate(
 
     ffCounts[semi1Winner.name] = (ffCounts[semi1Winner.name] || 0) + 1;
     ffCounts[semi2Winner.name] = (ffCounts[semi2Winner.name] || 0) + 1;
+    if (!advCounts[semi1Winner.name]) advCounts[semi1Winner.name] = { r32: 0, s16: 0, e8: 0, f4: 0, champ: 0 };
+    if (!advCounts[semi2Winner.name]) advCounts[semi2Winner.name] = { r32: 0, s16: 0, e8: 0, f4: 0, champ: 0 };
+    advCounts[semi1Winner.name].f4++;
+    advCounts[semi2Winner.name].f4++;
 
     const champion = pickRandom(semi1Winner, semi2Winner, "Championship");
     trackSlot("Championship", champion.name);
     champCounts[champion.name] = (champCounts[champion.name] || 0) + 1;
+    if (!advCounts[champion.name]) advCounts[champion.name] = { r32: 0, s16: 0, e8: 0, f4: 0, champ: 0 };
+    advCounts[champion.name].champ++;
   }
 
   // Build mode bracket (most common winner at each slot)
@@ -125,7 +150,7 @@ export function monteCarloSimulate(
     champion: modeWinner("Championship"),
   };
 
-  for (const region of REGIONS) {
+  for (const region of activeRegions) {
     modeBracket.regions[region] = {
       r64: Array.from({ length: 8 }, (_, i) => modeWinner(`${region}-R64-${i}`)),
       r32: Array.from({ length: 4 }, (_, i) => modeWinner(`${region}-R32-${i}`)),
@@ -156,7 +181,19 @@ export function monteCarloSimulate(
     .sort((a, b) => b.prob - a.prob)
     .slice(0, 25);
 
-  return { numSims, champProbs, ffProbs, e8Probs, modeBracket };
+  // Build advancement probability map
+  const advancement = new Map<string, AdvancementProbs>();
+  for (const [name, counts] of Object.entries(advCounts)) {
+    advancement.set(name, {
+      r32: counts.r32 / numSims,
+      s16: counts.s16 / numSims,
+      e8: counts.e8 / numSims,
+      f4: counts.f4 / numSims,
+      champ: counts.champ / numSims,
+    });
+  }
+
+  return { numSims, champProbs, ffProbs, e8Probs, advancement, modeBracket };
 }
 
 export function formatMonteCarloResult(result: MonteCarloResult): string {

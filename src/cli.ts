@@ -16,9 +16,11 @@ import { KenPomModel, MarketModel, TempoMatchupModel, SeedHistoryModel, Defensiv
 import { getCalibratedWeights, STAT_DIFFERENTIALS, MONEYLINE_CALIBRATION, TOURNAMENT_BOOST, EDGE_COUNT_INSIGHT } from "./models/betting-insights.js";
 import { runRecalibration } from "./historical/recalibrate.js";
 import { runBacktest, validateHistoricalData } from "./backtest/backtester.js";
+import { runBracketComparison } from "./backtest/bracket-scorer.js";
 import { generateScenarios, formatScenarios } from "./engine/scenario-generator.js";
 import { monteCarloSimulate, formatMonteCarloResult } from "./engine/monte-carlo.js";
 import { generateChampionBrackets, formatChampionBrackets } from "./engine/champion-brackets.js";
+import { buildSmartBracket, formatSmartBracket } from "./engine/smart-builder.js";
 import { formatBacktestResult, formatModelComparison, formatOptimizationResult } from "./backtest/backtest-report.js";
 import { runStaticOptimization, runAdaptiveOptimization } from "./backtest/weight-optimizer.js";
 import type { Predictor } from "./engine/generator.js";
@@ -304,12 +306,51 @@ program
     console.log("  - Model disagreement is a SIGNAL, not noise — flag high-spread matchups");
   });
 
+// ---- COMPARE-METHODS ----
+program
+  .command("compare-methods")
+  .description("Compare chalk vs smart builder vs MC across all 14 historical tournaments")
+  .option("--fetch", "Use real BartTorvik data (recommended)")
+  .action(async (opts) => {
+    const result = await runBracketComparison(!!opts.fetch);
+    console.log(result);
+  });
+
 // ---- RECALIBRATE ----
 program
   .command("recalibrate")
   .description("Run 14-year historical recalibration — compare old vs new thresholds")
   .action(() => {
     runRecalibration();
+  });
+
+// ---- SMART-BRACKET (EV-optimized) ----
+program
+  .command("smart-bracket")
+  .description("Build an EV-optimized bracket — picks the RIGHT upsets based on expected value math")
+  .option("-d, --data <path>", "Team data JSON file")
+  .option("--pool <size>", "Pool size: safe (small), balanced (medium), contrarian (large)", "balanced")
+  .option("--champion <team>", "Lock a specific champion")
+  .option("--sims <n>", "Monte Carlo simulations", "10000")
+  .option("--calibrated", "Use calibrated weights")
+  .action(async (opts) => {
+    const teams = await loadTeams(opts.data);
+    const seeded = teams.filter((t) => t.seed > 0);
+    if (seeded.length < 64) {
+      console.error(`Only ${seeded.length} seeded teams. Need 64.`);
+      process.exit(1);
+    }
+
+    const weights = opts.calibrated ? getCalibratedWeights() : undefined;
+    const ensemble = new EnsembleModel(weights);
+
+    console.log(`Building EV-optimized bracket (pool: ${opts.pool}, sims: ${opts.sims})...`);
+    const sb = buildSmartBracket(teams, ensemble, {
+      pool: opts.pool as "safe" | "balanced" | "contrarian",
+      champion: opts.champion,
+      sims: parseInt(opts.sims),
+    });
+    console.log(formatSmartBracket(sb));
   });
 
 // ---- BRACKET-FOR (champion-diversified brackets) ----
