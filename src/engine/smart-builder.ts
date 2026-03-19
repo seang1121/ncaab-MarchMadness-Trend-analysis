@@ -79,11 +79,13 @@ export function buildSmartBracket(
   const adv = mc.advancement;
 
   // Upset aggressiveness based on pool size
-  // Higher = more willing to pick upsets
+  // Historical average: 12-14 upsets per tournament (R64: ~8, R32: ~4, S16+: ~2)
+  // The base EV formula is chalk-biased because favorites have higher future value
+  // These boosts correct for that by making the EV calculation upset-aware
   const upsetBoost: Record<PoolSize, number> = {
-    safe: 0.0,        // pure EV maximization
-    balanced: 0.15,   // slight boost to underdogs
-    contrarian: 0.35, // aggressive upset hunting
+    safe: 0.20,       // ~8 upsets — conservative but historically realistic
+    balanced: 0.40,   // ~12 upsets — matches historical average
+    contrarian: 0.65, // ~16 upsets — aggressive differentiation
   };
   const boost = upsetBoost[poolSize];
 
