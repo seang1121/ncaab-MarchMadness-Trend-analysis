@@ -154,7 +154,7 @@ const BRACKETS = [
     regions: null, ff: null
   },
   {
-    id: 4, name: "Michigan", strategy: "BALANCED — More S16 upsets", upsets: 10, champion: "Michigan",
+    id: 4, name: "Florida", strategy: "BALANCED — Defending champ, Texas A&M upset", upsets: 11, champion: "Florida",
     regions: null, ff: null
   },
   {
@@ -184,12 +184,14 @@ const B4r = JSON.parse(JSON.stringify(B1));
 B4r.West.r32[1] = {t:["Wisconsin","Arkansas"],p:"Wisconsin",u:true};
 B4r.West.s16 = [{t:["Arizona","Wisconsin"],p:"Arizona"},{t:["Gonzaga","Purdue"],p:"Gonzaga",u:true}];
 B4r.West.e8 = [{t:["Arizona","Gonzaga"],p:"Arizona"}];
+B4r.South.r64[6] = {s:[7,10],t:["Saint Mary's","Texas A&M"],p:"Texas A&M",u:true};
 B4r.South.s16[1] = {t:["Illinois","Houston"],p:"Illinois",u:true};
 B4r.South.e8[0] = {t:["Florida","Illinois"],p:"Florida"};
+B4r.Midwest.r64[0] = {s:[1,16],t:["Michigan","UMBC"],p:"TCU"};
 B4r.Midwest.r64[1] = {s:[8,9],t:["Georgia","Saint Louis"],p:"Saint Louis",u:true};
 B4r.Midwest.r64[6] = {s:[7,10],t:["Kentucky","Santa Clara"],p:"Kentucky"};
 BRACKETS[3].regions = B4r;
-BRACKETS[3].ff = {semi1:{t:["Duke","Arizona"],p:"Arizona",u:true},semi2:{t:["Florida","Michigan"],p:"Michigan"},champ:{t:["Arizona","Michigan"],p:"Michigan"}};
+BRACKETS[3].ff = {semi1:{t:["Duke","Arizona"],p:"Arizona",u:true},semi2:{t:["Florida","Iowa St."],p:"Florida"},champ:{t:["Arizona","Florida"],p:"Florida"}};
 
 // Bracket 5: Houston contrarian
 const B5r = JSON.parse(JSON.stringify(B4r));
