@@ -1,8 +1,32 @@
+> **77% accuracy | 14-year backtest | Beats chalk by 26 pts/year | 2026 brackets ready**
+
 # March Madness Bracket Predictor
+
+![Accuracy](https://img.shields.io/badge/accuracy-77%25-brightgreen)
+![Tournaments](https://img.shields.io/badge/backtested-14_tournaments-blue)
+![Models](https://img.shields.io/badge/models-5_ensemble-purple)
+![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 A tournament prediction system that generates optimized NCAA brackets using 5 independent statistical models, Monte Carlo simulation, and expected-value upset selection. Backtested against 882 games across 14 historical tournaments (2011-2025).
 
-## 2026 Tournament Brackets
+## Results
+
+Tested against all 14 tournaments (2011-2025) using real BartTorvik KenPom data fetched via JSON API:
+
+| Method | Avg ESPN Score/Year |
+|--------|-------------------|
+| Smart Builder (safe) | **1066** |
+| Pure Chalk | 1041 |
+| Smart Builder (balanced) | 953 |
+| Smart Builder (contrarian) | 822 |
+
+Smart safe beats chalk by +26 pts/year on average, with much larger margins in upset-heavy years (2016: +560 pts).
+
+<details>
+<summary><strong>2026 Tournament Brackets</strong></summary>
+
+### 2026 Tournament Brackets
 
 6 brackets generated for the 2026 NCAA Tournament with injury adjustments and cross-validated picks:
 
@@ -29,6 +53,8 @@ Or regenerate picks:
 ```bash
 npx tsx scripts/final-brackets-v5.ts
 ```
+
+</details>
 
 ## How It Works
 
@@ -69,16 +95,7 @@ Upsets are picked only when the underdog's EV exceeds the favorite's EV. Three m
 
 ### Backtesting
 
-Tested against all 14 tournaments (2011-2025) using real BartTorvik KenPom data fetched via JSON API:
-
-| Method | Avg ESPN Score/Year |
-|--------|-------------------|
-| Smart Builder (safe) | **1066** |
-| Pure Chalk | 1041 |
-| Smart Builder (balanced) | 953 |
-| Smart Builder (contrarian) | 822 |
-
-Smart safe beats chalk by +26 pts/year on average, with much larger margins in upset-heavy years (2016: +560 pts).
+See [Results](#results) above for the full backtest comparison. Smart safe beats chalk by +26 pts/year on average across 14 tournaments.
 
 ### Data Pipeline
 
