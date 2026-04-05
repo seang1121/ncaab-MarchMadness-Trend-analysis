@@ -250,6 +250,12 @@ npx tsx src/cli.ts smart-bracket -d data/teams-2027.json --pool balanced
 - BartTorvik JSON API for team efficiency data
 - No external ML dependencies — ensemble of rule-based models with calibrated weights
 
+## Related Projects
+
+- **[Sports Betting MCP Server](https://github.com/seang1121/sports-betting-mcp)** — The first MCP server for sports betting. 9 tools, live odds, AI picks, 59.6% win rate.
+- **[Multi-Lender Mortgage Rate Lookup](https://github.com/seang1121/Multi-Lender-Mortgage-Rate-Lookup)** — One command, 10 lenders, sorted best to worst. Stealth-browser mortgage rate comparison.
+- **[Agent Command Center](https://github.com/seang1121/acc-agent-command-center)** — Dashboard that auto-discovers MCP servers, agents, hooks, cron jobs, and repos.
+
 ## License
 
 MIT
