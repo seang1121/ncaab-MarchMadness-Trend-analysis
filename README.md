@@ -2,28 +2,67 @@
 
 A tournament prediction system that generates optimized NCAA brackets using 5 independent statistical models, Monte Carlo simulation, and expected-value upset selection. Backtested against 882 games across 14 historical tournaments (2011-2025).
 
-## 2026 Tournament Brackets
+## 2026 Tournament Results
 
-6 brackets generated for the 2026 NCAA Tournament with injury adjustments and cross-validated picks:
+**Michigan defeated UConn 69-63 to win the 2026 NCAA Championship.**
+
+Our **Bracket #2 correctly predicted Michigan as champion** — scoring **1,720 ESPN points** with **82.5% game accuracy** (52/63 correct picks).
+
+### Bracket Scorecard vs Actual Results
+
+| Rank | Bracket | ESPN Score | Accuracy | Champion |
+|------|---------|-----------|----------|----------|
+| 🥇 | **#2 SAFE — Michigan** | **1,720 pts** | **82.5%** | ✅ **CORRECT** |
+| 🥈 | #1 SAFE — Arizona | 1,410 pts | 82.5% | ❌ |
+| 🥉 | #3 SAFE — Duke | 1,260 pts | 82.5% | ❌ |
+| 4th | #6 CONTRARIAN — Illinois | 1,220 pts | 74.6% | ❌ |
+| 5th | #4 BALANCED — Florida | 1,110 pts | 76.2% | ❌ |
+| 6th | #5 CONTRARIAN — Houston | 1,050 pts | 71.4% | ❌ |
+
+### What We Got Right
+- ✅ **Michigan champion** (Bracket #2)
+- ✅ **Arizona Final Four** (all 6 brackets)
+- ✅ **Illinois Elite 8** from South region
+- ✅ **UConn Elite 8** from East region
+- ✅ Iowa 9-over-8 upset (called in 5 brackets)
+- ✅ Saint Louis 9-over-8 upset (called in 5 brackets)
+- ✅ Utah State 9-over-8 upset (all 6 brackets)
+- ✅ VCU over UNC upset (Brackets 3, 6)
+- ✅ Texas A&M over Saint Mary's (Bracket 4)
+
+### What We Missed
+- ❌ High Point 12-over-5 upset over Wisconsin (no bracket predicted)
+- ❌ TCU over Ohio State (no bracket predicted)
+- ❌ Texas over BYU + deep R32 run (only Bracket 5 had Texas)
+- ❌ Iowa's Cinderella run to Sweet 16 (called R64 upset, missed deep run)
+- ❌ Florida's early exit to 9-seed Iowa (all brackets had Florida advancing)
+
+### Actual Final Four
+| Team | Seed | Region | Result |
+|------|------|--------|--------|
+| **Michigan** | 1 | Midwest | **Champion** (69-63 over UConn) |
+| UConn | 2 | East | Runner-up |
+| Arizona | 1 | West | Semifinal loss to Michigan (73-91) |
+| Illinois | 3 | South | Semifinal loss to UConn |
+
+---
+
+## Original 2026 Bracket Predictions
+
+6 brackets generated pre-tournament with injury adjustments and cross-validated picks:
 
 | # | Champion | Strategy | Upsets | Unique R64 Upset |
 |---|----------|----------|--------|-----------------|
 | 1 | Arizona | Safe — analytically best team, under-picked | 6 | Cleanest |
-| 2 | Michigan | Safe — #1 defense, model's math pick | 7 | South Florida over Louisville |
+| 2 | **Michigan** ✅ | Safe — #1 defense, model's math pick | 7 | South Florida over Louisville |
 | 3 | Duke | Safe — #1 overall seed | 7 | VCU over North Carolina |
 | 4 | Florida | Balanced — defending champion | 11 | TCU over Ohio St., Texas A&M over Saint Mary's |
 | 5 | Houston | Contrarian — best 2-seed | 14 | Texas over BYU, Akron over Texas Tech |
 | 6 | Illinois | Contrarian — #1 offense, 3-seed sleeper | 15 | UCF over UCLA, Santa Clara over Kentucky |
 
-**6 unique champions covering ~59% of outcomes. 21 unique upsets. No two brackets identical.**
-
-Picks cross-validated against Nate Silver (COOPER model), KenPom rankings, Rithmm AI, and CBS/ESPN expert panels.
-
-Injuries factored: Duke center (OUT), Louisville Brown Jr (OUT), Texas Tech Toppin (ACL), Tennessee Ament (hobbled), North Carolina Wilson (OUT).
-
 ### Fill In Your Brackets
 
-Open `brackets-2026.html` in your browser for an interactive pick sheet with checkboxes. Use it side-by-side with [ESPN Tournament Challenge](https://fantasy.espn.com/games/tournament-challenge-bracket-2026).
+Open `brackets-2026.html` in your browser for the interactive pick sheet.
 
 Or regenerate picks:
 ```bash
